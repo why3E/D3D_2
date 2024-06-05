@@ -6,6 +6,7 @@
 #define DIR_RIGHT           0x08
 #define DIR_UP              0x10
 #define DIR_DOWN            0x20
+#define BULLETS					10
 
 #include "GameObject.h"
 #include "Camera.h"
@@ -13,6 +14,9 @@
 // "CPlayer" 클래스를 다음과 같이 수정한다.
 class CPlayer : public CGameObject
 {
+public:
+    virtual void Animate(float fElapsedTime);
+
 protected:
     // 플레이어의 위치 벡터, x-축(Right), y-축(Up), z-축(Look) 벡터이다.
     XMFLOAT3                m_xmf3Position;
@@ -110,4 +114,12 @@ public:
     virtual ~CAirplanePlayer();
     virtual CCamera* ChangeCamera(DWORD nNewCameraMode, float fTimeElapsed);
     virtual void OnPrepareRender();
+
+    float						m_fBulletEffectiveRange = 150.0f;
+    CBulletObject* m_ppBullets[BULLETS];
+
+    void FireBullet(CGameObject* pLockedObject);
+    virtual void OnUpdateTransform();
+    virtual void Animate(float fElapsedTime);
+    virtual void Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera);
 };

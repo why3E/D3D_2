@@ -32,6 +32,8 @@ protected:
 	ID3D12RootSignature* m_pd3dGraphicsRootSignature = NULL;
 	CObjectsShader* m_pShaders = NULL;
 	int m_nShaders = 0;
+
+	void CheckObjectByObjectCollisions();
 };
 
 class start_Scene :CScene

@@ -49,11 +49,15 @@ bool CScene::ProcessInput(UCHAR* pKeysBuffer)
 
 void CScene::AnimateObjects(float fTimeElapsed)
 {
+
 	for (int i = 0; i < m_nShaders; i++)
 	{
 		m_pShaders[i].AnimateObjects(fTimeElapsed);
 	}
 }
+
+
+
 void CScene::ReleaseUploadBuffers()
 {
 	for (int i = 0; i < m_nShaders; i++) m_pShaders[i].ReleaseUploadBuffers();

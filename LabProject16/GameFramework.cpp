@@ -349,6 +349,10 @@ void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPA
 			if (m_pPlayer) m_pCamera = m_pPlayer->ChangeCamera((wParam - VK_F1 + 1),
 				m_GameTimer.GetTimeElapsed());
 			break;
+		case VK_CONTROL:
+			((CAirplanePlayer*)m_pPlayer)->FireBullet(m_pSelectedObject);
+			m_pSelectedObject = NULL;
+			break;
 		default:
 			break;
 		}
@@ -445,6 +449,7 @@ void CGameFramework::ProcessInput()
 void CGameFramework::AnimateObjects()
 {
 	if (m_pScene) m_pScene->AnimateObjects(m_GameTimer.GetTimeElapsed());
+	if (m_pPlayer) m_pPlayer->Animate(m_GameTimer.GetTimeElapsed());
 }
 
 void CGameFramework::WaitForGpuComplete()

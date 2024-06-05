@@ -126,7 +126,7 @@ CCubeMeshDiffused::CCubeMeshDiffused(ID3D12Device* pd3dDevice, ID3D12GraphicsCom
 	m_d3dIndexBufferView.BufferLocation = m_pd3dIndexBuffer->GetGPUVirtualAddress();
 	m_d3dIndexBufferView.Format = DXGI_FORMAT_R32_UINT;
 	m_d3dIndexBufferView.SizeInBytes = sizeof(UINT) * m_nIndices;
-	m_xmBoundingBox = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fx, fy,
+	m_xmOOBB = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fx, fy,
 		fz), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 }
 
@@ -305,7 +305,7 @@ CAirplaneMeshDiffused::CAirplaneMeshDiffused(ID3D12Device* pd3dDevice,
 	m_d3dVertexBufferView.BufferLocation = m_pd3dVertexBuffer->GetGPUVirtualAddress();
 	m_d3dVertexBufferView.StrideInBytes = m_nStride;
 	m_d3dVertexBufferView.SizeInBytes = m_nStride * m_nVertices;
-	m_xmBoundingBox = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fx, fy,
+	m_xmOOBB = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fx, fy,
 		fz), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 }
 CAirplaneMeshDiffused::~CAirplaneMeshDiffused()
@@ -398,7 +398,7 @@ CSphereMeshDiffused::CSphereMeshDiffused(ID3D12Device* pd3dDevice,
 	m_d3dIndexBufferView.BufferLocation = m_pd3dIndexBuffer->GetGPUVirtualAddress();
 	m_d3dIndexBufferView.Format = DXGI_FORMAT_R32_UINT;
 	m_d3dIndexBufferView.SizeInBytes = sizeof(UINT) * m_nIndices;
-	m_xmBoundingBox = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fRadius,
+	m_xmOOBB = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fRadius,
 		fRadius, fRadius), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 }
 CSphereMeshDiffused::~CSphereMeshDiffused()
@@ -422,7 +422,7 @@ int CMesh::CheckRayIntersection(XMFLOAT3& xmf3RayOrigin, XMFLOAT3& xmf3RayDirect
 	XMVECTOR xmRayOrigin = XMLoadFloat3(&xmf3RayOrigin);
 	XMVECTOR xmRayDirection = XMLoadFloat3(&xmf3RayDirection);
 	//모델 좌표계의 광선과 메쉬의 바운딩 박스(모델 좌표계)와의 교차를 검사한다.
-	bool bIntersected = m_xmBoundingBox.Intersects(xmRayOrigin, xmRayDirection,
+	bool bIntersected = m_xmOOBB.Intersects(xmRayOrigin, xmRayDirection,
 		*pfNearHitDistance);
 	//모델 좌표계의 광선이 메쉬의 바운딩 박스와 교차하면 메쉬와의 교차를 검사한다.
 	if (bIntersected)

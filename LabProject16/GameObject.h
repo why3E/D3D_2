@@ -7,6 +7,24 @@ class CShader;
 class CGameObject
 {
 public:
+	XMFLOAT3					m_xmf3MovingDirection = XMFLOAT3(0.0f, 0.0f, 1.0f);
+	float						m_fMovingSpeed = 0.0f;
+	float						m_fMovingRange = 0.0f;
+
+	void SetMovingDirection(XMFLOAT3& xmf3MovingDirection) { m_xmf3MovingDirection = Vector3::Normalize(xmf3MovingDirection); }
+	void SetMovingSpeed(float fSpeed) { m_fMovingSpeed = fSpeed; }
+	void SetMovingRange(float fRange) { m_fMovingRange = fRange; }
+
+	bool						m_bActive = true;
+	void SetActive(bool bActive) { m_bActive = bActive; }
+
+	XMFLOAT4X4 m_xmf4x4World;
+
+	void Move(XMFLOAT3& vDirection, float fSpeed);
+	void UpdateBoundingBox();
+
+	BoundingOrientedBox			m_xmOOBB = BoundingOrientedBox();
+
 	//¸ðµ¨ ÁÂÇ¥°èÀÇ ÇÈÅ· ±¤¼±À» »ý¼ºÇÑ´Ù.
 	void GenerateRayForPicking(XMFLOAT3& xmf3PickPosition, XMFLOAT4X4& xmf4x4View,
 		XMFLOAT3* pxmf3PickRayOrigin, XMFLOAT3* pxmf3PickRayDirection);
@@ -25,7 +43,6 @@ public:
 	void AddRef() { m_nReferences++; }
 	void Release() { if (--m_nReferences <= 0) delete this; }
 protected:
-	XMFLOAT4X4 m_xmf4x4World;
 	CMesh* m_pMesh = NULL;
 	CShader* m_pShader = NULL;
 public:
@@ -68,9 +85,10 @@ class CRotatingObject : public CGameObject
 public:
 	CRotatingObject();
 	virtual ~CRotatingObject();
+
+	float m_fRotationSpeed;
 private:
 	XMFLOAT3 m_xmf3RotationAxis;
-	float m_fRotationSpeed;
 public:
 	void SetRotationSpeed(float fRotationSpeed) { m_fRotationSpeed = fRotationSpeed; }
 	void SetRotationAxis(XMFLOAT3 xmf3RotationAxis) {
@@ -78,4 +96,27 @@ public:
 			xmf3RotationAxis;
 	}
 	virtual void Animate(float fTimeElapsed);
+};
+
+class CBulletObject : public CRotatingObject
+{
+public:
+	CBulletObject(float fEffectiveRange);
+	virtual ~CBulletObject();
+
+public:
+	virtual void Animate(float fElapsedTime);
+
+	float						m_fBulletEffectiveRange = 50.0f;
+	float						m_fMovingDistance = 0.0f;
+	float						m_fRotationAngle = 0.0f;
+	XMFLOAT3					m_xmf3FirePosition = XMFLOAT3(0.0f, 0.0f, 1.0f);
+
+	float						m_fElapsedTimeAfterFire = 0.0f;
+	float						m_fLockingDelayTime = 0.3f;
+	float						m_fLockingTime = 4.0f;
+	CGameObject* m_pLockedObject = NULL;
+
+	void SetFirePosition(XMFLOAT3 xmf3FirePosition);
+	void Reset();
 };
