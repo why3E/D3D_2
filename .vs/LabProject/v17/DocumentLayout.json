@@ -1,0 +1,1649 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jkkks\\Desktop\\D3D_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\LabProject16.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\LabProject16.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\LabProject16.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7ABA8DD6-7306-470C-95AD-8EB718B029D7}|LabProject16\\LabProject16.vcxproj|solutionrelative:LabProject16\\LabProject16.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\LabProject15.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\LabProject11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\LabProject10.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\stdafx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\LabProject09.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\LabProject08.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shaders.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\LabProject07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\LabProject06.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\LabProject06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\LabProject07.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\stdafx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject02\\srdafx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shaders.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\LabProject05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Shaders.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject04\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 324,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LabProject16.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\LabProject16.h",
+              "RelativeDocumentMoniker": "LabProject16\\LabProject16.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\LabProject16.h",
+              "RelativeToolTip": "LabProject16\\LabProject16.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-05T00:34:01.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Player.h",
+              "RelativeDocumentMoniker": "LabProject16\\Player.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Player.h",
+              "RelativeToolTip": "LabProject16\\Player.h",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-05T00:33:42.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Player.cpp",
+              "RelativeDocumentMoniker": "LabProject16\\Player.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Player.cpp",
+              "RelativeToolTip": "LabProject16\\Player.cpp",
+              "ViewState": "AQIAAEEBAAAAAAAAAAAAAK8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-05T00:31:04.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameFramework.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameFramework.cpp",
+              "RelativeDocumentMoniker": "LabProject16\\GameFramework.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameFramework.cpp",
+              "RelativeToolTip": "LabProject16\\GameFramework.cpp",
+              "ViewState": "AQIAANEBAAAAAAAAAAAAAOYBAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:26:05.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameFramework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameFramework.h",
+              "RelativeDocumentMoniker": "LabProject16\\GameFramework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameFramework.h",
+              "RelativeToolTip": "LabProject16\\GameFramework.h",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAAAoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T10:25:33.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Shader.cpp",
+              "RelativeDocumentMoniker": "LabProject16\\Shader.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Shader.cpp",
+              "RelativeToolTip": "LabProject16\\Shader.cpp",
+              "ViewState": "AQIAADcBAAAAAAAAAAAAAEEBAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:23:57.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Shader.h",
+              "RelativeDocumentMoniker": "LabProject16\\Shader.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Shader.h",
+              "RelativeToolTip": "LabProject16\\Shader.h",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T10:23:39.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Scene.cpp",
+              "RelativeDocumentMoniker": "LabProject16\\Scene.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Scene.cpp",
+              "RelativeToolTip": "LabProject16\\Scene.cpp",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:23:12.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Scene.h",
+              "RelativeDocumentMoniker": "LabProject16\\Scene.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Scene.h",
+              "RelativeToolTip": "LabProject16\\Scene.h",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T10:22:52.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameObject.cpp",
+              "RelativeDocumentMoniker": "LabProject16\\GameObject.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameObject.cpp",
+              "RelativeToolTip": "LabProject16\\GameObject.cpp",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAJMAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:21:57.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameObject.h",
+              "RelativeDocumentMoniker": "LabProject16\\GameObject.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\GameObject.h",
+              "RelativeToolTip": "LabProject16\\GameObject.h",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAABsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T10:21:44.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Mesh.cpp",
+              "RelativeDocumentMoniker": "LabProject16\\Mesh.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Mesh.cpp",
+              "RelativeToolTip": "LabProject16\\Mesh.cpp",
+              "ViewState": "AQIAAH0BAAAAAAAAAAAYwJcBAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:15:30.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Mesh.h",
+              "RelativeDocumentMoniker": "LabProject16\\Mesh.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\Mesh.h",
+              "RelativeToolTip": "LabProject16\\Mesh.h",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAHQAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T10:14:36.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LabProject16.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\LabProject16.cpp",
+              "RelativeDocumentMoniker": "LabProject16\\LabProject16.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\D3D_2\\LabProject16\\LabProject16.cpp",
+              "RelativeToolTip": "LabProject16\\LabProject16.cpp",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAAAC8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:11:10.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameObject.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\GameObject.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameObject.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\GameObject.cpp",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAYwKgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:08:06.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Mesh.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\Mesh.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Mesh.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\Mesh.h",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACcAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T10:04:06.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LabProject15.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\LabProject15.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\LabProject15.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\LabProject15.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\LabProject15.cpp",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAYwK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T08:44:48.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Camera.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Camera.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\Camera.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Camera.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\Camera.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T10:05:59.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameObject.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\GameObject.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameObject.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\GameObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T10:07:23.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Player.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\Player.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Player.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\Player.cpp",
+              "ViewState": "AQIAABYBAAAAAAAAAAD4vy8BAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T08:49:57.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Camera.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Camera.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\Camera.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Camera.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\Camera.cpp",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAJ0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T08:49:01.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Scene.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\Scene.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\Scene.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\Scene.cpp",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAA8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T08:48:49.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GameFramework.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameFramework.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject15\\GameFramework.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject15\\GameFramework.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject15\\GameFramework.cpp",
+              "ViewState": "AQIAAPoAAAAAAAAAAAD4vwwBAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T08:47:44.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameObject.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\GameObject.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameObject.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\GameObject.h",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T08:27:19.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Shader.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Shader.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Shader.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Shader.cpp",
+              "ViewState": "AQIAADIBAAAAAAAAAAAAAEQBAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T12:40:49.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameObject.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\GameObject.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameObject.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\GameObject.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGsAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T12:44:29.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LabProject11.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\LabProject11.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\LabProject11.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\LabProject11.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\LabProject11.cpp",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAAAK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T11:39:57.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GameFramework.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameFramework.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\GameFramework.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameFramework.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\GameFramework.cpp",
+              "ViewState": "AQIAACcBAAAAAAAAAAAiwJYBAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T11:42:54.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Player.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Player.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Player.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Player.cpp",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAiwKkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T12:18:44.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "framework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\framework.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\framework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\framework.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\framework.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T11:42:59.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Mesh.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Mesh.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Mesh.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Mesh.cpp",
+              "ViewState": "AQIAADIBAAAAAAAAAAAAADkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T11:41:54.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Shader.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Shader.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Shader.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Shader.h",
+              "ViewState": "AQIAACoAAAAAAAAAAAAiwDoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T12:40:44.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Shader.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\Shader.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Shader.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\Shader.h",
+              "ViewState": "AQIAACoAAAAAAAAAAAAiwDoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T03:48:35.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Player.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Player.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Player.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Player.h",
+              "ViewState": "AQIAACAAAAAAAAAAAAAiwDYAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T11:59:23.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Camera.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Camera.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Camera.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Camera.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Camera.h",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAawEwAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T11:43:55.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Scene.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Scene.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Scene.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Scene.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T02:43:50.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "GameFramework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameFramework.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\GameFramework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\GameFramework.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\GameFramework.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T12:29:52.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\stdafx.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\stdafx.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\stdafx.h",
+              "ViewState": "AQIAABwAAAAAAAAAAAAawCsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T11:43:03.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Camera.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Camera.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Camera.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Camera.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Camera.cpp",
+              "ViewState": "AQIAAC0BAAAAAAAAAAAkwEIBAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T11:47:30.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Mesh.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject11\\Mesh.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject11\\Mesh.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject11\\Mesh.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF4AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T11:41:56.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\stdafx.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\stdafx.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\stdafx.h",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAAAJcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T08:23:16.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Scene.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\Scene.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Scene.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\Scene.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB4AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T03:52:35.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "LabProject10.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\LabProject10.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\LabProject10.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\LabProject10.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\LabProject10.cpp",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAUwK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:43:21.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "GameFramework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameFramework.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\GameFramework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameFramework.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\GameFramework.h",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T08:23:22.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameObject.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\GameObject.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameObject.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\GameObject.cpp",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:46:50.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "GameFramework.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameFramework.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\GameFramework.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameFramework.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\GameFramework.cpp",
+              "ViewState": "AQIAAGIBAAAAAAAAAAAAAAMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:55:39.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Scene.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\Scene.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Scene.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\Scene.cpp",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAEEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:53:17.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Shader.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\Shader.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Shader.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\Shader.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQBAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:48:15.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "stdafx.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\stdafx.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\stdafx.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\stdafx.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\stdafx.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:58:27.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\GameObject.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject09\\GameObject.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\GameObject.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject09\\GameObject.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:43:30.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Mesh.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\Mesh.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\Mesh.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\Mesh.cpp",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:58:28.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameObject.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject10\\GameObject.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject10\\GameObject.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject10\\GameObject.h",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T03:46:08.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\Mesh.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject09\\Mesh.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\Mesh.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject09\\Mesh.cpp",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwIIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:37:25.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\Mesh.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject09\\Mesh.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\Mesh.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject09\\Mesh.h",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAwDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T03:36:55.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "LabProject09.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\LabProject09.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject09\\LabProject09.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject09\\LabProject09.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject09\\LabProject09.cpp",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAAwK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:28:50.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "GameFramework.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\GameFramework.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject08\\GameFramework.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\GameFramework.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject08\\GameFramework.cpp",
+              "ViewState": "AQIAAAsBAAAAAAAAAAAAACIBAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T02:36:39.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "GameFramework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\GameFramework.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject08\\GameFramework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\GameFramework.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject08\\GameFramework.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T02:36:36.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Scene.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject08\\Scene.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Scene.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject08\\Scene.cpp",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T02:35:46.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Mesh.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject08\\Mesh.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Mesh.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject08\\Mesh.cpp",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAwH0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T02:35:13.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Mesh.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject08\\Mesh.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\Mesh.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject08\\Mesh.h",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAAEgAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T02:34:38.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject08\\stdafx.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\stdafx.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject08\\stdafx.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T02:34:06.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "LabProject08.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\LabProject08.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject08\\LabProject08.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject08\\LabProject08.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject08\\LabProject08.cpp",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAAwK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T02:28:15.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "GameFramework.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameFramework.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\GameFramework.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameFramework.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\GameFramework.cpp",
+              "ViewState": "AQIAAJUBAAAAAAAAAAAAAAsBAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T00:34:33.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Camera.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Camera.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\Camera.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Camera.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\Camera.h",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABUAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:31:45.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Camera.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Camera.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\Camera.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Camera.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\Camera.cpp",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAADYAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T00:32:28.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameObject.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\GameObject.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameObject.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\GameObject.h",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:37:48.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameObject.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\GameObject.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameObject.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\GameObject.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T07:48:26.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Mesh.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\Mesh.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Mesh.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\Mesh.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:38:08.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "Shaders.hlsl",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shaders.hlsl",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\Shaders.hlsl",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shaders.hlsl",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\Shaders.hlsl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2024-06-03T00:48:46.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "GameFramework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameFramework.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\GameFramework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\GameFramework.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\GameFramework.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:33:32.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shader.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\Shader.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shader.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\Shader.cpp",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAmwH8AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T00:43:37.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "LabProject07.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\LabProject07.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\LabProject07.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\LabProject07.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\LabProject07.cpp",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAAwK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T07:45:28.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shader.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\Shader.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shader.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\Shader.cpp",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAAAKIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T06:35:12.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\stdafx.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\stdafx.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\stdafx.h",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAIwAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:31:06.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Scene.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\Scene.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Scene.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\Scene.cpp",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAmwD4AAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T00:37:23.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "framework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\framework.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\framework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\framework.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\framework.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:38:19.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Scene.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\Scene.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Scene.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\Scene.h",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:37:03.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shader.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\Shader.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shader.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\Shader.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAIwBQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T06:29:36.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "targetver.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\targetver.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\targetver.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\targetver.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\targetver.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T01:07:50.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "LabProject06.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\LabProject06.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\LabProject06.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\LabProject06.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\LabProject06.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T06:40:47.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameObject.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\GameObject.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameObject.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\GameObject.h",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABkAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T06:52:41.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Mesh.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\Mesh.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Mesh.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\Mesh.cpp",
+              "ViewState": "AQIAABQAAAAAAAAAAAAiwDQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T06:30:44.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shader.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\Shader.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\Shader.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\Shader.h",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAIwCEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:38:04.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Scene.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\Scene.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Scene.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\Scene.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T06:56:54.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "LabProject06.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\LabProject06.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\LabProject06.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\LabProject06.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\LabProject06.cpp",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAkwK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T06:19:47.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameObject.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\GameObject.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameObject.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\GameObject.cpp",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T06:33:09.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "LabProject07.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\LabProject07.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\LabProject07.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\LabProject07.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\LabProject07.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T00:38:29.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "stdafx.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\stdafx.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject07\\stdafx.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject07\\stdafx.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject07\\stdafx.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T07:51:22.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Scene.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\Scene.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Scene.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\Scene.cpp",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAACAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-27T04:08:27.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "GameFramework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameFramework.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\GameFramework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameFramework.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\GameFramework.h",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T07:04:39.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "srdafx.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject02\\srdafx.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject02\\srdafx.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject02\\srdafx.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject02\\srdafx.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T06:27:23.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\stdafx.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\stdafx.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\stdafx.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-27T03:58:10.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "Shaders.hlsl",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shaders.hlsl",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\Shaders.hlsl",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Shaders.hlsl",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\Shaders.hlsl",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAkwBkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2024-06-02T06:40:39.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "GameFramework.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameFramework.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\GameFramework.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\GameFramework.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\GameFramework.cpp",
+              "ViewState": "AQIAALIAAAAAAAAAAAAIwL4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T06:24:24.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Scene.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\Scene.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Scene.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\Scene.h",
+              "ViewState": "AQIAABEAAAAAAAAAAAAuwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T06:48:08.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "GameFramework.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\GameFramework.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\GameFramework.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\GameFramework.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\GameFramework.h",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAAADMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-27T03:59:12.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Scene.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\Scene.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Scene.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\Scene.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-27T04:07:51.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\stdafx.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\stdafx.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\stdafx.h",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAAC0AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T06:25:58.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Mesh.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\Mesh.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Mesh.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\Mesh.h",
+              "ViewState": "AQIAACUAAAAAAAAAAAAiwEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T06:30:08.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "Timer.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Timer.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject06\\Timer.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject06\\Timer.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject06\\Timer.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T06:40:45.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "LabProject05.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\LabProject05.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\LabProject05.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\LabProject05.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\LabProject05.cpp",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAuwK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-27T04:13:46.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "Timer.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Timer.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\Timer.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Timer.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\Timer.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-27T04:19:42.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "GameFramework.cpp",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\GameFramework.cpp",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\GameFramework.cpp",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\GameFramework.cpp",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\GameFramework.cpp",
+              "ViewState": "AQIAAJIBAAAAAAAAAAAAAJ0BAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-27T04:02:47.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "Shaders.hlsl",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Shaders.hlsl",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\Shaders.hlsl",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Shaders.hlsl",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\Shaders.hlsl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2024-05-27T04:11:33.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "Resource.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Resource.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\Resource.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Resource.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\Resource.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-28T10:17:18.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "Timer.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Timer.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject05\\Timer.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject05\\Timer.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject05\\Timer.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-27T04:13:55.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "Timer.h",
+              "DocumentMoniker": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject04\\Timer.h",
+              "RelativeDocumentMoniker": "..\\3d\\LabProject\\LabProject04\\Timer.h",
+              "ToolTip": "C:\\Users\\jkkks\\Desktop\\3d\\LabProject\\LabProject04\\Timer.h",
+              "RelativeToolTip": "..\\3d\\LabProject\\LabProject04\\Timer.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-27T04:17:22.602Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
