@@ -278,7 +278,7 @@ void CObjectsShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsComman
 			{
 				pRotatingObject = new CRotatingObject();
 				//직육면체와 구 메쉬를 교대로 배치한다.
-				pRotatingObject->SetMesh((i % 2) ? (CMesh*)pCubeMesh : (CMesh*)pSphereMesh);
+				pRotatingObject->SetMesh((CMesh*)pSphereMesh);
 				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
 				pRotatingObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
 				pRotatingObject->SetRotationSpeed(10.0f * (i % 10));
@@ -347,4 +347,77 @@ CGameObject* CObjectsShader::PickObjectByRayIntersection(XMFLOAT3& xmf3PickPosit
 		}
 	}
 	return(pSelectedObject);
+}
+CstartShader::CstartShader()
+{
+}
+CstartShader::~CstartShader()
+{
+	
+}
+
+void CstartShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
+{
+	CCubeMeshDiffused* pCubeMesh = new CCubeMeshDiffused(pd3dDevice, pd3dCommandList,
+		12.0f, 12.0f, 12.0f);
+	int xObjects = 1, yObjects = 1, zObjects = 1, i = 0;
+	m_nObjects = (xObjects * 2 + 1) * (yObjects * 2 + 1) * (zObjects * 2 + 1);
+	m_ppObjects = new CGameObject * [m_nObjects];
+	float fxPitch = 12.0f * 2.5f;
+	float fyPitch = 12.0f * 2.5f;
+	float fzPitch = 12.0f * 2.5f;
+	CRotatingObject* pRotatingObject = NULL;
+	for (int x = -xObjects; x <= xObjects; x++)
+	{
+		for (int y = -yObjects; y <= yObjects; y++)
+		{
+			for (int z = -zObjects; z <= zObjects; z++)
+			{
+				pRotatingObject = new CRotatingObject();
+				pRotatingObject->SetMesh((CMesh*)pCubeMesh);
+				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
+				pRotatingObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
+				pRotatingObject->SetRotationSpeed(10.0f * (i % 10));
+				m_ppObjects[i++] = pRotatingObject;
+			}
+		}
+	}
+	CreateShaderVariables(pd3dDevice, pd3dCommandList);
+}
+CstageShader::CstageShader()
+{
+
+}
+CstageShader::~CstageShader()
+{
+	
+}
+
+void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
+{
+	CAirplaneMeshDiffused* pairplane = new CAirplaneMeshDiffused(pd3dDevice, pd3dCommandList,
+		8.0f, 12.0f, 4.0f, RANDOM_COLOR);
+	int xObjects = 1, yObjects = 1, zObjects = 1, i = 0;
+	m_nObjects = (xObjects * 2 + 1) * (yObjects * 2 + 1) * (zObjects * 2 + 1);
+	m_ppObjects = new CGameObject * [m_nObjects];
+	float fxPitch = 12.0f * 2.5f;
+	float fyPitch = 12.0f * 2.5f;
+	float fzPitch = 12.0f * 2.5f;
+	CRotatingObject* pRotatingObject = NULL;
+	for (int x = -xObjects; x <= xObjects; x++)
+	{
+		for (int y = -yObjects; y <= yObjects; y++)
+		{
+			for (int z = -zObjects; z <= zObjects; z++)
+			{
+				pRotatingObject = new CRotatingObject();
+				pRotatingObject->SetMesh((CMesh*)pairplane);
+				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
+				pRotatingObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
+				pRotatingObject->SetRotationSpeed(10.0f * (i % 10));
+				m_ppObjects[i++] = pRotatingObject;
+			}
+		}
+	}
+	CreateShaderVariables(pd3dDevice, pd3dCommandList);
 }
