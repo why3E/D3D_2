@@ -36,7 +36,6 @@ protected:
 
 class start_Scene :CScene
 {
-public:
 	start_Scene();
 	~start_Scene();
 
@@ -46,7 +45,6 @@ public:
 
 class stage_Scene :CScene
 {
-public:
 	stage_Scene();
 	~stage_Scene();
 

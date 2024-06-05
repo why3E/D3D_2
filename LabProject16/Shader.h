@@ -78,23 +78,3 @@ protected:
 	CGameObject** m_ppObjects = NULL;
 	int m_nObjects = 0;
 };
-
-class CstartShader : public CObjectsShader
-{
-public:
-	CstartShader();
-	virtual ~CstartShader();
-
-	virtual void BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
-		* pd3dCommandList);
-};
-
-class CstageShader : public CObjectsShader
-{
-public:
-	CstageShader();
-	virtual ~CstageShader();
-
-	virtual void BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
-		* pd3dCommandList);
-};
