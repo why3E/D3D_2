@@ -360,7 +360,7 @@ void CstartShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 {
 	CCubeMeshDiffused* pCubeMesh = new CCubeMeshDiffused(pd3dDevice, pd3dCommandList,
 		12.0f, 12.0f, 12.0f);
-	int xObjects = 1, yObjects = 1, zObjects = 1, i = 0;
+	int xObjects = 0, yObjects = 0, zObjects = 0, i = 0;
 	m_nObjects = (xObjects * 2 + 1) * (yObjects * 2 + 1) * (zObjects * 2 + 1);
 	m_ppObjects = new CGameObject * [m_nObjects];
 	float fxPitch = 12.0f * 2.5f;
