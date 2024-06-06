@@ -264,14 +264,18 @@ void CGameFramework::CreateDepthStencilView()
 void CGameFramework::BuildObjects()
 {
 	m_pd3dCommandList->Reset(m_pd3dCommandAllocator, NULL);
+
 	start_Scene* check_scene = new start_Scene();
 	m_pScene = (CScene*)check_scene;
 	if (m_pScene) m_pScene->BuildObjects(m_pd3dDevice, m_pd3dCommandList);
+
 	CAirplanePlayer* pAirplanePlayer = new CAirplanePlayer(m_pd3dDevice,
 		m_pd3dCommandList, m_pScene->GetGraphicsRootSignature());
 	m_pPlayer = pAirplanePlayer;
 	m_pCamera = m_pPlayer->GetCamera();
+	
 	m_pd3dCommandList->Close();
+	m_pScene->setPlayer(m_pPlayer);
 	ID3D12CommandList* ppd3dCommandLists[] = { m_pd3dCommandList };
 	m_pd3dCommandQueue->ExecuteCommandLists(1, ppd3dCommandLists);
 	WaitForGpuComplete();
@@ -286,9 +290,12 @@ void CGameFramework::BuildObjects_change()
 	stage_Scene* check_scene = new stage_Scene();
 	m_pScene = (CScene*)check_scene;
 	if (m_pScene) m_pScene->BuildObjects(m_pd3dDevice, m_pd3dCommandList);
+	
+	m_pScene->setPlayer(m_pPlayer);
 	m_pd3dCommandList->Close();
 	ID3D12CommandList* ppd3dCommandLists[] = { m_pd3dCommandList };
 	m_pd3dCommandQueue->ExecuteCommandLists(1, ppd3dCommandLists);
+
 	WaitForGpuComplete();
 	if (m_pScene) m_pScene->ReleaseUploadBuffers();
 	m_GameTimer.Reset();
@@ -448,8 +455,8 @@ void CGameFramework::ProcessInput()
 }
 void CGameFramework::AnimateObjects()
 {
-	if (m_pScene) m_pScene->AnimateObjects(m_GameTimer.GetTimeElapsed());
 	if (m_pPlayer) m_pPlayer->Animate(m_GameTimer.GetTimeElapsed());
+	if (m_pScene) m_pScene->AnimateObjects(m_GameTimer.GetTimeElapsed());
 }
 
 void CGameFramework::WaitForGpuComplete()

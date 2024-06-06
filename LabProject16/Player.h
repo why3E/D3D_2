@@ -16,7 +16,7 @@ class CPlayer : public CGameObject
 {
 public:
     virtual void Animate(float fElapsedTime);
-
+    virtual void OnUpdateTransform();
 protected:
     // 플레이어의 위치 벡터, x-축(Right), y-축(Up), z-축(Look) 벡터이다.
     XMFLOAT3                m_xmf3Position;

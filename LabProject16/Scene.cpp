@@ -167,7 +167,7 @@ void CScene::CheckObjectByBulletCollisions()
 		{
 			if (ppBullets[j]->m_bActive && m_pShaders->m_ppObjects[i]->m_xmOOBB.Intersects(ppBullets[j]->m_xmOOBB))
 			{
-				//ppBullets[j]->Reset();
+				ppBullets[j]->m_fMovingSpeed = 0;
 			}
 		}
 	}

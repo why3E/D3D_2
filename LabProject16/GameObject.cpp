@@ -32,6 +32,7 @@ void CGameObject::SetShader(CShader* pShader)
 	if (m_pShader) m_pShader->Release();
 	m_pShader = pShader;
 	if (m_pShader) m_pShader->AddRef();
+
 }
 void CGameObject::SetMesh(CMesh* pMesh)
 {
@@ -48,12 +49,22 @@ void CGameObject::ReleaseUploadBuffers()
 
 void CGameObject::Animate(float fTimeElapsed)
 {
+	UpdateBoundingBox();
 	if (m_fMovingSpeed != 0.0f) Move(m_xmf3MovingDirection, m_fMovingSpeed * fTimeElapsed);
 
+}
+void CGameObject::UpdateBoundingBox()
+{
+	if (m_pMesh)
+	{
+		m_pMesh->m_xmOOBB.Transform(m_xmOOBB, XMLoadFloat4x4(&m_xmf4x4World));
+		XMStoreFloat4(&m_xmOOBB.Orientation, XMQuaternionNormalize(XMLoadFloat4(&m_xmOOBB.Orientation)));
+	}
 }
 
 void CGameObject::OnPrepareRender()
 {
+
 }
 
 void CGameObject::CreateShaderVariables(ID3D12Device* pd3dDevice,
@@ -73,6 +84,7 @@ void CGameObject::UpdateShaderVariables(ID3D12GraphicsCommandList* pd3dCommandLi
 
 void CGameObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera)
 {
+
 	//게임 객체가 카메라에 보이면 렌더링한다.
 	if (IsVisible(pCamera))
 	{
@@ -81,6 +93,7 @@ void CGameObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pC
 		if (m_pMesh) m_pMesh->Render(pd3dCommandList);
 	}
 }
+
 
 void CGameObject::Rotate(XMFLOAT3* pxmf3Axis, float fAngle)
 {
@@ -92,16 +105,9 @@ void CGameObject::Rotate(XMFLOAT3* pxmf3Axis, float fAngle)
 void CGameObject::Move(XMFLOAT3& vDirection, float fSpeed)
 {
 	SetPosition(m_xmf4x4World._41 + vDirection.x * fSpeed, m_xmf4x4World._42 + vDirection.y * fSpeed, m_xmf4x4World._43 + vDirection.z * fSpeed);
+
 }
 
-void CGameObject::UpdateBoundingBox()
-{
-	if (m_pMesh)
-	{
-		m_pMesh->m_xmOOBB.Transform(m_xmOOBB, XMLoadFloat4x4(&m_xmf4x4World));
-		XMStoreFloat4(&m_xmOOBB.Orientation, XMQuaternionNormalize(XMLoadFloat4(&m_xmOOBB.Orientation)));
-	}
-}
 
 CRotatingObject::CRotatingObject()
 {
@@ -116,6 +122,7 @@ void CRotatingObject::Animate(float fTimeElapsed)
 
 	CGameObject::Rotate(&m_xmf3RotationAxis, m_fRotationSpeed * fTimeElapsed);
 	CGameObject::Animate(fTimeElapsed);
+
 }
 
 void CGameObject::SetPosition(float x, float y, float z)
@@ -124,6 +131,7 @@ void CGameObject::SetPosition(float x, float y, float z)
 	m_xmf4x4World._42 = y;
 	m_xmf4x4World._43 = z;
 }
+
 void CGameObject::SetPosition(XMFLOAT3 xmf3Position)
 {
 	SetPosition(xmf3Position.x, xmf3Position.y, xmf3Position.z);

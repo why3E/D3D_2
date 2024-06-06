@@ -278,9 +278,17 @@ void CPlayer::OnPrepareRender()
 	m_xmf4x4World._43 = m_xmf3Position.z;
 }
 
+void CPlayer::OnUpdateTransform()
+{
+	m_xmf4x4World._11 = m_xmf3Right.x; m_xmf4x4World._12 = m_xmf3Right.y; m_xmf4x4World._13 = m_xmf3Right.z;
+	m_xmf4x4World._21 = m_xmf3Up.x; m_xmf4x4World._22 = m_xmf3Up.y; m_xmf4x4World._23 = m_xmf3Up.z;
+	m_xmf4x4World._31 = m_xmf3Look.x; m_xmf4x4World._32 = m_xmf3Look.y; m_xmf4x4World._33 = m_xmf3Look.z;
+	m_xmf4x4World._41 = m_xmf3Position.x; m_xmf4x4World._42 = m_xmf3Position.y; m_xmf4x4World._43 = m_xmf3Position.z;
+}
 
 void CPlayer::Animate(float fElapsedTime)
 {
+	OnUpdateTransform();
 	CGameObject::Animate(fElapsedTime);
 }
 
@@ -300,7 +308,7 @@ CAirplanePlayer::CAirplanePlayer(ID3D12Device* pd3dDevice, ID3D12GraphicsCommand
 {
 
 	CSphereMeshDiffused* pBulletMesh = new CSphereMeshDiffused(pd3dDevice, pd3dCommandList,
-		12.0f, 5, 5);
+		2.0f, 20, 20);
 	for (int i = 0; i < BULLETS; i++)
 	{
 		m_ppBullets[i] = new CBulletObject(m_fBulletEffectiveRange);
@@ -453,7 +461,7 @@ void CAirplanePlayer::Animate(float fElapsedTime)
 }
 void CAirplanePlayer::OnUpdateTransform()
 {
-	CPlayer::OnPrepareRender();
+	CPlayer::OnUpdateTransform();
 
 	m_xmf4x4World = Matrix4x4::Multiply(XMMatrixRotationRollPitchYaw(XMConvertToRadians(90.0f), 0.0f, 0.0f), m_xmf4x4World);
 }

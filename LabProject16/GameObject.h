@@ -16,11 +16,14 @@ public:
 	void SetMovingRange(float fRange) { m_fMovingRange = fRange; }
 
 	bool						m_bActive = true;
-	void SetActive(bool bActive) { m_bActive = bActive; }
 
+	void SetActive(bool bActive) { m_bActive = bActive; }
+	
 	XMFLOAT4X4 m_xmf4x4World;
 
 	void Move(XMFLOAT3& vDirection, float fSpeed);
+
+
 	void UpdateBoundingBox();
 
 	BoundingOrientedBox			m_xmOOBB = BoundingOrientedBox();
