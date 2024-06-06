@@ -131,8 +131,7 @@ void CGameObject::Move(XMFLOAT3& vDirection, float fSpeed)
 
 CRotatingObject::CRotatingObject()
 {
-	m_xmf3RotationAxis = XMFLOAT3(0.0f, 1.0f, 0.0f);
-	m_fRotationSpeed = 90.0f;
+
 }
 CRotatingObject::~CRotatingObject()
 {
@@ -404,7 +403,9 @@ void CExplosiveObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamer
 
 void CGameObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera, XMFLOAT4X4* pxmf4x4World, CMesh* pMesh)
 {
-	pd3dCommandList->SetGraphicsRoot32BitConstants(0, 16, pxmf4x4World, 0);
+	XMFLOAT4X4 xmmtx4x4TransposedWorld = Matrix4x4::Transpose(*pxmf4x4World);
+
+	pd3dCommandList->SetGraphicsRoot32BitConstants(0, 16, &xmmtx4x4TransposedWorld, 0);
 
 	if (pMesh)
 	{
