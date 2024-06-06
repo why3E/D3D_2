@@ -131,7 +131,8 @@ void CGameObject::Move(XMFLOAT3& vDirection, float fSpeed)
 
 CRotatingObject::CRotatingObject()
 {
-
+	m_xmf3RotationAxis = XMFLOAT3(0.0f, 1.0f, 0.0f);
+	m_fRotationSpeed = 90.0f;
 }
 CRotatingObject::~CRotatingObject()
 {
@@ -340,7 +341,7 @@ void CExplosiveObject::PrepareExplosion(ID3D12Device* pd3dDevice,
 {
 	for (int i = 0; i < EXPLOSION_DEBRISES; i++) XMStoreFloat3(&m_pxmf3SphereVectors[i], ::RandomUnitVectorOnSphere());
 
-	m_pExplosionMesh = new CCubeMeshDiffused(pd3dDevice, pd3dCommandList,1.0f, 20, 20);
+	m_pExplosionMesh = new CSphereMeshDiffused(pd3dDevice, pd3dCommandList,1.0f, 20, 20);
 }
 
 void CExplosiveObject::Animate(float fElapsedTime)
@@ -351,7 +352,6 @@ void CExplosiveObject::Animate(float fElapsedTime)
 		if (m_fElapsedTimes <= m_fDuration)
 		{
 			XMFLOAT3 xmf3Position = GetPosition();
-
 			for (int i = 0; i < EXPLOSION_DEBRISES; i++)
 			{
 				m_pxmf4x4Transforms[i] = Matrix4x4::Identity();
@@ -397,6 +397,7 @@ void CExplosiveObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamer
 	else
 	{
 		CGameObject::Render(pd3dCommandList,pCamera);
+
 		//for (int i = 0; i < BULLETS; i++) if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Render(hDCFrameBuffer, pCamera);
 	}
 }
