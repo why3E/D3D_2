@@ -13,6 +13,7 @@ CScene::~CScene()
 void CScene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
 	* pd3dCommandList)
 {
+	CExplosiveObject::PrepareExplosion(pd3dDevice, pd3dCommandList);
 	m_pd3dGraphicsRootSignature = CreateGraphicsRootSignature(pd3dDevice);
 	m_nShaders = 1;
 	m_pShaders = new CObjectsShader[m_nShaders];
@@ -167,7 +168,9 @@ void CScene::CheckObjectByBulletCollisions()
 		{
 			if (ppBullets[j]->m_bActive && m_pShaders->m_ppObjects[i]->m_xmOOBB.Intersects(ppBullets[j]->m_xmOOBB))
 			{
-				ppBullets[j]->m_fMovingSpeed = 0;
+				CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders->m_ppObjects[i];
+				pExplosiveObject->m_bBlowingUp = true;
+				ppBullets[j]->Reset();
 			}
 		}
 	}
@@ -182,6 +185,8 @@ start_Scene::~start_Scene()
 }
 void start_Scene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
 {
+	CExplosiveObject::PrepareExplosion(pd3dDevice, pd3dCommandList);
+
 	m_pd3dGraphicsRootSignature = CreateGraphicsRootSignature(pd3dDevice);
 	m_nShaders = 1;
 	CstartShader* startShager = new CstartShader[m_nShaders];
@@ -200,6 +205,8 @@ stage_Scene::~stage_Scene()
 
 void stage_Scene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
 {
+	CExplosiveObject::PrepareExplosion(pd3dDevice, pd3dCommandList);
+
 	m_pd3dGraphicsRootSignature = CreateGraphicsRootSignature(pd3dDevice);
 	m_nShaders = 1;
 	CstageShader* stageShager = new CstageShader[m_nShaders];

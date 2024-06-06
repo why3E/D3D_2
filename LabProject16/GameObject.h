@@ -1,8 +1,11 @@
 #pragma once
 #include "Mesh.h"
 #include "Camera.h"
+#define BULLETS					10
+#define EXPLOSION_DEBRISES		50
 
 class CShader;
+class CBulletObject;
 
 class CGameObject
 {
@@ -27,6 +30,9 @@ public:
 	void UpdateBoundingBox();
 
 	BoundingOrientedBox			m_xmOOBB = BoundingOrientedBox();
+
+	void Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera, XMFLOAT4X4* pxmf4x4World, CMesh* pMesh);
+	
 
 	//¸ðµ¨ ÁÂÇ¥°èÀÇ ÇÈÅ· ±¤¼±À» »ý¼ºÇÑ´Ù.
 	void GenerateRayForPicking(XMFLOAT3& xmf3PickPosition, XMFLOAT4X4& xmf4x4View,
@@ -89,9 +95,9 @@ public:
 	CRotatingObject();
 	virtual ~CRotatingObject();
 
-	float m_fRotationSpeed;
+	float m_fRotationSpeed{};
 private:
-	XMFLOAT3 m_xmf3RotationAxis;
+	XMFLOAT3 m_xmf3RotationAxis{};
 public:
 	void SetRotationSpeed(float fRotationSpeed) { m_fRotationSpeed = fRotationSpeed; }
 	void SetRotationAxis(XMFLOAT3 xmf3RotationAxis) {
@@ -122,4 +128,41 @@ public:
 
 	void SetFirePosition(XMFLOAT3 xmf3FirePosition);
 	void Reset();
+};
+
+
+class CExplosiveObject : public CRotatingObject
+{
+public:
+	CExplosiveObject();
+	virtual ~CExplosiveObject();
+
+	bool						m_bBlowingUp = false;
+
+	XMFLOAT4X4					m_pxmf4x4Transforms[EXPLOSION_DEBRISES];
+
+	float						m_fElapsedTimes = 0.0f;
+	float						m_fDuration = 2.0f;
+	float						m_fExplosionSpeed = 10.0f;
+	float						m_fExplosionRotation = 720.0f;
+
+	float						m_fElapsedTimeAfterFire = 0.0f;
+	float						m_fLockingDelayTime = 4.0f;
+
+	char Type{};
+
+	//CBulletObject* m_ppBullets[BULLETS];
+	//float						m_fBulletEffectiveRange = 150.0f;
+	//void FireBullet(float fElapsedTime);
+
+	virtual void Animate(float fElapsedTime);
+	virtual void Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera);
+
+public:
+	static CMesh*				m_pExplosionMesh;
+	static XMFLOAT3				m_pxmf3SphereVectors[EXPLOSION_DEBRISES];
+
+	static void PrepareExplosion(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList);
+
+
 };

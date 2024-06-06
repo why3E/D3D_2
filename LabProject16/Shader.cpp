@@ -366,14 +366,14 @@ void CstartShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 	float fxPitch = 12.0f * 2.5f;
 	float fyPitch = 12.0f * 2.5f;
 	float fzPitch = 12.0f * 2.5f;
-	CRotatingObject* pRotatingObject = NULL;
+	CExplosiveObject* pRotatingObject = NULL;
 	for (int x = -xObjects; x <= xObjects; x++)
 	{
 		for (int y = -yObjects; y <= yObjects; y++)
 		{
 			for (int z = -zObjects; z <= zObjects; z++)
 			{
-				pRotatingObject = new CRotatingObject();
+				pRotatingObject = new CExplosiveObject();
 				pRotatingObject->SetMesh((CMesh*)pCubeMesh);
 				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
 				pRotatingObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
@@ -395,6 +395,8 @@ CstageShader::~CstageShader()
 
 void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
 {
+	CExplosiveObject::PrepareExplosion(pd3dDevice, pd3dCommandList);
+
 	CAirplaneMeshDiffused* pairplane = new CAirplaneMeshDiffused(pd3dDevice, pd3dCommandList,
 		8.0f, 12.0f, 4.0f, RANDOM_COLOR);
 	int xObjects = 1, yObjects = 1, zObjects = 1, i = 0;
@@ -403,14 +405,14 @@ void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 	float fxPitch = 12.0f * 2.5f;
 	float fyPitch = 12.0f * 2.5f;
 	float fzPitch = 12.0f * 2.5f;
-	CRotatingObject* pRotatingObject = NULL;
+	CExplosiveObject* pRotatingObject = NULL;
 	for (int x = -xObjects; x <= xObjects; x++)
 	{
 		for (int y = -yObjects; y <= yObjects; y++)
 		{
 			for (int z = -zObjects; z <= zObjects; z++)
 			{
-				pRotatingObject = new CRotatingObject();
+				pRotatingObject = new CExplosiveObject();
 				pRotatingObject->SetMesh((CMesh*)pairplane);
 				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
 				pRotatingObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
