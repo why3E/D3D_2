@@ -333,8 +333,9 @@ CSphereMeshDiffused::CSphereMeshDiffused(ID3D12Device* pd3dDevice,
 	//360도를 nSlices 만큼 분할한다.
 	float fDeltaTheta = float((2.0f * XM_PI) / nSlices);
 	int k = 0;
+	color = RANDOM_COLOR;
 	//구의 위(북극)를 나타내는 정점이다.
-	m_pVertices[k++] = CDiffusedVertex(0.0f, +fRadius, 0.0f, RANDOM_COLOR);
+	m_pVertices[k++] = CDiffusedVertex(0.0f, +fRadius, 0.0f, color);
 	float theta_i, phi_j;
 	//원기둥 표면의 정점이다.
 	for (int j = 1; j < nStacks; j++)
@@ -344,11 +345,11 @@ CSphereMeshDiffused::CSphereMeshDiffused(ID3D12Device* pd3dDevice,
 		{
 			theta_i = fDeltaTheta * i;
 			m_pVertices[k++] = CDiffusedVertex(fRadius * sinf(phi_j) * cosf(theta_i),
-				fRadius * cosf(phi_j), fRadius * sinf(phi_j) * sinf(theta_i), RANDOM_COLOR);
+				fRadius * cosf(phi_j), fRadius * sinf(phi_j) * sinf(theta_i), color);
 		}
 	}
 	//구의 아래(남극)를 나타내는 정점이다.
-	m_pVertices[k] = CDiffusedVertex(0.0f, -fRadius, 0.0f, RANDOM_COLOR);
+	m_pVertices[k] = CDiffusedVertex(0.0f, -fRadius, 0.0f, color);
 	m_pd3dVertexBuffer = ::CreateBufferResource(pd3dDevice, pd3dCommandList, m_pVertices,
 		m_nStride * m_nVertices, D3D12_HEAP_TYPE_DEFAULT,
 		D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER, &m_pd3dVertexUploadBuffer);

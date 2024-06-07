@@ -52,6 +52,7 @@ void CScene::AnimateObjects(float fTimeElapsed)
 	}
 
 	CheckObjectByBulletCollisions();
+	CheckPlyaerByBulletCollisions();
 }
 
 
@@ -171,6 +172,23 @@ void CScene::CheckObjectByBulletCollisions()
 	}
 }
 
+void CScene::CheckPlyaerByBulletCollisions()
+{
+	for (int i = 0; i < m_pShaders->m_nObjects; i++)
+	{
+		CBulletObject** ppBullets = ((CExplosiveObject*)m_pShaders->m_ppObjects[i])->m_ppBullets;
+
+		for (int j = 0; j < BULLETS; j++)
+		{
+			if (ppBullets[j]->m_bActive && m_pPlayer->m_xmOOBB.Intersects(ppBullets[j]->m_xmOOBB))
+			{
+				m_pPlayer->m_bBlowingUp = true;
+				ppBullets[j]->Reset();
+			}
+		}
+	}
+
+}
 // �� ����ѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤ�
 start_Scene::start_Scene()
 {

@@ -35,7 +35,10 @@ protected:
 	CObjectsShader* m_pShaders = NULL;
 	int m_nShaders = 0;
 	CPlayer* m_pPlayer = NULL;
+
+public:
 	void CheckObjectByBulletCollisions();
+	void CheckPlyaerByBulletCollisions();
 };
 
 class start_Scene :CScene

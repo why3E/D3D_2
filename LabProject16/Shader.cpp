@@ -415,8 +415,12 @@ void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 				pRotatingObject = new CExplosiveObject(pd3dDevice, pd3dCommandList);
 				pRotatingObject->SetMesh((CMesh*)pairplane);
 				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
-				pRotatingObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
-				pRotatingObject->SetRotationSpeed(10.0f * (i % 10));
+				pRotatingObject->SetRotationAxis(XMFLOAT3(1.0f, 0.0f, 0.0f));
+				pRotatingObject->SetRotationSpeed(0);
+
+				pRotatingObject->SetMovingDirection(XMFLOAT3(1.0f, 0, 0));
+				pRotatingObject->SetMovingSpeed(5.0f);
+				pRotatingObject->Rotate(-90.0f, 0.0f, 0);
 				m_ppObjects[i++] = pRotatingObject;
 			}
 		}

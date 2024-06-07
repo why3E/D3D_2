@@ -15,6 +15,20 @@
 class CPlayer : public CGameObject
 {
 public:
+    //≈Õ¡ˆ±‚
+    bool						m_bBlowingUp = false;
+    static CMesh* m_pExplosionMesh;
+    static XMFLOAT3				m_pxmf3SphereVectors[EXPLOSION_DEBRISES];
+    XMFLOAT4X4					m_pxmf4x4Transforms[EXPLOSION_DEBRISES];
+
+
+    float						m_fElapsedTimes = 0.0f;
+    float						m_fDuration = 2.0f;
+    float						m_fExplosionSpeed = 10.0f;
+    float						m_fExplosionRotation = 720.0f;
+
+   
+public:
     virtual void Animate(float fElapsedTime);
     virtual void OnUpdateTransform();
 protected:
@@ -114,6 +128,7 @@ public:
     virtual ~CAirplanePlayer();
     virtual CCamera* ChangeCamera(DWORD nNewCameraMode, float fTimeElapsed);
     virtual void OnPrepareRender();
+    void PrepareExplosion(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList);
 
     float						m_fBulletEffectiveRange = 150.0f;
     CBulletObject* m_ppBullets[BULLETS];
@@ -122,4 +137,6 @@ public:
     virtual void OnUpdateTransform();
     virtual void Animate(float fElapsedTime);
     virtual void Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera);
+
+
 };

@@ -330,6 +330,7 @@ CExplosiveObject::CExplosiveObject(ID3D12Device* pd3dDevice,ID3D12GraphicsComman
 {
 	CSphereMeshDiffused* pBulletMesh = new CSphereMeshDiffused(pd3dDevice, pd3dCommandList,
 		2.0f, 20, 20);
+
 	for (int i = 0; i < BULLETS; i++)
 	{
 		m_ppBullets[i] = new CBulletObject(m_fBulletEffectiveRange);
@@ -338,6 +339,7 @@ CExplosiveObject::CExplosiveObject(ID3D12Device* pd3dDevice,ID3D12GraphicsComman
 		m_ppBullets[i]->SetRotationSpeed(360.0f);
 		m_ppBullets[i]->SetMovingSpeed(80.0f);
 		m_ppBullets[i]->SetActive(false);
+		
 	}
 }
 

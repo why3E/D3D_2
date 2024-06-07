@@ -1,6 +1,29 @@
 #include "Player.h"
 #include "Shader.h"
 
+
+inline float RandF2(float fMin, float fMax)
+{
+	return(fMin + ((float)rand() / (float)RAND_MAX) * (fMax - fMin));
+}
+
+XMVECTOR RandomUnitVectorOnSphere2()
+{
+	XMVECTOR xmvOne = XMVectorSet(1.0f, 1.0f, 1.0f, 1.0f);
+	XMVECTOR xmvZero = XMVectorZero();
+
+	while (true)
+	{
+		XMVECTOR v = XMVectorSet(RandF2(-1.0f, 1.0f), RandF2(-1.0f, 1.0f), RandF2(-1.0f, 1.0f), 0.0f);
+		if (!XMVector3Greater(XMVector3LengthSq(v), xmvOne)) return(XMVector3Normalize(v));
+	}
+}
+
+
+XMFLOAT3 CPlayer::m_pxmf3SphereVectors[EXPLOSION_DEBRISES];
+CMesh* CPlayer::m_pExplosionMesh = NULL;
+
+
 CPlayer::CPlayer()
 {
 	m_pCamera = NULL;
@@ -18,6 +41,7 @@ CPlayer::CPlayer()
 	m_fYaw = 0.0f;
 	m_pPlayerUpdatedContext = NULL;
 	m_pCameraUpdatedContext = NULL;
+	
 }
 CPlayer::~CPlayer()
 {
@@ -288,8 +312,33 @@ void CPlayer::OnUpdateTransform()
 
 void CPlayer::Animate(float fElapsedTime)
 {
-	OnUpdateTransform();
-	CGameObject::Animate(fElapsedTime);
+	if (m_bBlowingUp)
+	{
+		m_fElapsedTimes += fElapsedTime;
+		if (m_fElapsedTimes <= m_fDuration)
+		{
+			XMFLOAT3 xmf3Position = GetPosition();
+			for (int i = 0; i < EXPLOSION_DEBRISES; i++)
+			{
+				m_pxmf4x4Transforms[i] = Matrix4x4::Identity();
+				m_pxmf4x4Transforms[i]._41 = xmf3Position.x + m_pxmf3SphereVectors[i].x * m_fExplosionSpeed * m_fElapsedTimes;
+				m_pxmf4x4Transforms[i]._42 = xmf3Position.y + m_pxmf3SphereVectors[i].y * m_fExplosionSpeed * m_fElapsedTimes;
+				m_pxmf4x4Transforms[i]._43 = xmf3Position.z + m_pxmf3SphereVectors[i].z * m_fExplosionSpeed * m_fElapsedTimes;
+				m_pxmf4x4Transforms[i] = Matrix4x4::Multiply(Matrix4x4::RotationAxis(m_pxmf3SphereVectors[i], m_fExplosionRotation * m_fElapsedTimes), m_pxmf4x4Transforms[i]);
+			}
+		}
+		else
+		{
+			m_bBlowingUp = false;
+			m_fElapsedTimes = 0.0f;
+		}
+	}
+	else
+	{
+		OnUpdateTransform();
+		CGameObject::Animate(fElapsedTime);
+
+	}
 }
 
 void CPlayer::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera)
@@ -298,9 +347,20 @@ void CPlayer::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamer
 	//카메라 모드가 3인칭이면 플레이어 객체를 렌더링한다.
 	if (nCameraMode == THIRD_PERSON_CAMERA)
 	{
-		if (m_pShader) m_pShader->Render(pd3dCommandList, pCamera);
-		CGameObject::Render(pd3dCommandList, pCamera);
+		if (m_bBlowingUp)
+		{
+			for (int i = 0; i < EXPLOSION_DEBRISES; i++)
+			{
+				CGameObject::Render(pd3dCommandList, pCamera, &m_pxmf4x4Transforms[i], m_pExplosionMesh);
+			}
+		}
+		else {
+			if (m_pShader) m_pShader->Render(pd3dCommandList, pCamera);
+			CGameObject::Render(pd3dCommandList, pCamera);
+		}
 	}
+
+	
 }
 
 CAirplanePlayer::CAirplanePlayer(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
@@ -334,12 +394,20 @@ CAirplanePlayer::CAirplanePlayer(ID3D12Device* pd3dDevice, ID3D12GraphicsCommand
 	CPlayerShader* pShader = new CPlayerShader();
 	pShader->CreateShader(pd3dDevice, pd3dGraphicsRootSignature);
 	SetShader(pShader);
+	PrepareExplosion(pd3dDevice, pd3dCommandList);
 }
 
 CAirplanePlayer::~CAirplanePlayer()
 {
 
 	for (int i = 0; i < BULLETS; i++) if (m_ppBullets[i]) delete m_ppBullets[i];
+}
+
+void CAirplanePlayer::PrepareExplosion(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
+	* pd3dCommandList)
+{
+	for (int i = 0; i < EXPLOSION_DEBRISES; i++) XMStoreFloat3(&m_pxmf3SphereVectors[i], ::RandomUnitVectorOnSphere2());
+	m_pExplosionMesh = new CSphereMeshDiffused(pd3dDevice, pd3dCommandList, 1.0f, 20, 20);
 }
 
 void CAirplanePlayer::OnPrepareRender()
@@ -458,6 +526,9 @@ void CAirplanePlayer::Animate(float fElapsedTime)
 	{
 		if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Animate(fElapsedTime);
 	}
+
+	
+
 }
 void CAirplanePlayer::OnUpdateTransform()
 {
