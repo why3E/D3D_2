@@ -134,7 +134,7 @@ public:
 class CExplosiveObject : public CRotatingObject
 {
 public:
-	CExplosiveObject();
+	CExplosiveObject(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList);
 	virtual ~CExplosiveObject();
 
 	bool						m_bBlowingUp = false;
@@ -151,9 +151,9 @@ public:
 
 	char Type{};
 
-	//CBulletObject* m_ppBullets[BULLETS];
-	//float						m_fBulletEffectiveRange = 150.0f;
-	//void FireBullet(float fElapsedTime);
+	CBulletObject* m_ppBullets[BULLETS];
+	float						m_fBulletEffectiveRange = 150.0f;
+	void FireBullet(float fElapsedTime);
 
 	virtual void Animate(float fElapsedTime);
 	virtual void Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera);

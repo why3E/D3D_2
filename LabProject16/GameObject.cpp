@@ -326,13 +326,24 @@ void CBulletObject::Animate(float fElapsedTime)
 XMFLOAT3 CExplosiveObject::m_pxmf3SphereVectors[EXPLOSION_DEBRISES];
 CMesh* CExplosiveObject::m_pExplosionMesh = NULL;
 
-CExplosiveObject::CExplosiveObject()
+CExplosiveObject::CExplosiveObject(ID3D12Device* pd3dDevice,ID3D12GraphicsCommandList* pd3dCommandList)
 {
+	CSphereMeshDiffused* pBulletMesh = new CSphereMeshDiffused(pd3dDevice, pd3dCommandList,
+		2.0f, 20, 20);
+	for (int i = 0; i < BULLETS; i++)
+	{
+		m_ppBullets[i] = new CBulletObject(m_fBulletEffectiveRange);
+		m_ppBullets[i]->SetMesh(pBulletMesh);
+		m_ppBullets[i]->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
+		m_ppBullets[i]->SetRotationSpeed(360.0f);
+		m_ppBullets[i]->SetMovingSpeed(80.0f);
+		m_ppBullets[i]->SetActive(false);
+	}
 }
 
 CExplosiveObject::~CExplosiveObject()
 {
-	
+	for (int i = 0; i < BULLETS; i++) if (m_ppBullets[i]) delete m_ppBullets[i];
 }
 
 void CExplosiveObject::PrepareExplosion(ID3D12Device* pd3dDevice,
@@ -341,6 +352,41 @@ void CExplosiveObject::PrepareExplosion(ID3D12Device* pd3dDevice,
 	for (int i = 0; i < EXPLOSION_DEBRISES; i++) XMStoreFloat3(&m_pxmf3SphereVectors[i], ::RandomUnitVectorOnSphere());
 
 	m_pExplosionMesh = new CSphereMeshDiffused(pd3dDevice, pd3dCommandList,1.0f, 20, 20);
+}
+
+void CExplosiveObject::FireBullet(float fElapsedTime)
+{
+	m_fElapsedTimeAfterFire += fElapsedTime;
+
+	float fDistance = m_fMovingSpeed * fElapsedTime;
+
+	if (m_fElapsedTimeAfterFire > m_fLockingDelayTime ) {
+
+		CBulletObject* pBulletObject = NULL;
+		for (int i = 0; i < BULLETS; ++i)
+		{
+			if (!m_ppBullets[i]->m_bActive)
+			{
+				pBulletObject = m_ppBullets[i];
+				break;
+			}
+		}
+
+		if (pBulletObject)
+		{
+			XMFLOAT3 xmf3Position = GetPosition();
+			XMFLOAT3 xmf3Direction = GetUp();
+			XMFLOAT3 xmf3FirePosition = Vector3::Add(xmf3Position, Vector3::ScalarProduct(xmf3Direction, 6.0f, false));
+
+			pBulletObject->m_xmf4x4World = m_xmf4x4World;
+
+			pBulletObject->SetFirePosition(xmf3FirePosition);
+			pBulletObject->SetMovingDirection(xmf3Direction);
+			pBulletObject->SetActive(true);
+		}
+
+		m_fElapsedTimeAfterFire = 0.0;
+	}
 }
 
 void CExplosiveObject::Animate(float fElapsedTime)
@@ -370,11 +416,11 @@ void CExplosiveObject::Animate(float fElapsedTime)
 	}
 	else
 	{
-		//FireBullet(fElapsedTime);
-		//for (int i = 0; i < BULLETS; i++)
-		//{
-		//	if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Animate(fElapsedTime);
-		//}
+		FireBullet(fElapsedTime);
+		for (int i = 0; i < BULLETS; i++)
+		{
+			if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Animate(fElapsedTime);
+		}
 		//if (Type == 'A') {
 			//TargetRotateXY();
 			//TargetRotateYZ();
@@ -397,7 +443,7 @@ void CExplosiveObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamer
 	{
 		CGameObject::Render(pd3dCommandList,pCamera);
 
-		//for (int i = 0; i < BULLETS; i++) if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Render(hDCFrameBuffer, pCamera);
+		for (int i = 0; i < BULLETS; i++) if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Render(pd3dCommandList, pCamera);
 	}
 }
 

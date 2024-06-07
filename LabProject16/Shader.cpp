@@ -373,7 +373,7 @@ void CstartShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 		{
 			for (int z = -zObjects; z <= zObjects; z++)
 			{
-				pRotatingObject = new CExplosiveObject();
+				pRotatingObject = new CExplosiveObject(pd3dDevice, pd3dCommandList);
 				pRotatingObject->SetMesh((CMesh*)pCubeMesh);
 				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
 				pRotatingObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
@@ -412,7 +412,7 @@ void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 		{
 			for (int z = -zObjects; z <= zObjects; z++)
 			{
-				pRotatingObject = new CExplosiveObject();
+				pRotatingObject = new CExplosiveObject(pd3dDevice, pd3dCommandList);
 				pRotatingObject->SetMesh((CMesh*)pairplane);
 				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
 				pRotatingObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
