@@ -90,27 +90,27 @@ void CPlayer::Rotate(float x, float y, float z)
 		/*로컬 x-축을 중심으로 회전하는 것은 고개를 앞뒤로 숙이는 동작에 해당한다. 그러므로 x-축을 중심으로 회전하는
 	   각도는 -89.0~+89.0도 사이로 제한한다. x는 현재의 m_fPitch에서 실제 회전하는 각도이므로 x만큼 회전한 다음
 	   Pitch가 +89도 보다 크거나 -89도 보다 작으면 m_fPitch가 +89도 또는 -89도가 되도록 회전각도(x)를 수정한다.*/
-		m_pCamera->Rotate(x, y, z);
 		if (x != 0.0f)
 		{
-			XMMATRIX xmmtxRotate = XMMatrixRotationAxis(XMLoadFloat3(&m_xmf3Right),
-				XMConvertToRadians(x));
-			m_xmf3Look = Vector3::TransformNormal(m_xmf3Look, xmmtxRotate);
-			m_xmf3Up = Vector3::TransformNormal(m_xmf3Up, xmmtxRotate);
+			m_fPitch += x;
+			if (m_fPitch > +89.0f) { x -= (m_fPitch - 89.0f); m_fPitch = +89.0f; }
+			if (m_fPitch < -89.0f) { x -= (m_fPitch + 89.0f); m_fPitch = -89.0f; }
 		}
 		if (y != 0.0f)
 		{
-			XMMATRIX xmmtxRotate = XMMatrixRotationAxis(XMLoadFloat3(&m_xmf3Up),
-				XMConvertToRadians(y));
-			m_xmf3Look = Vector3::TransformNormal(m_xmf3Look, xmmtxRotate);
-			m_xmf3Right = Vector3::TransformNormal(m_xmf3Right, xmmtxRotate);
+			//로컬 y-축을 중심으로 회전하는 것은 몸통을 돌리는 것이므로 회전 각도의 제한이 없다.
+			m_fYaw += y;
+			if (m_fYaw > 360.0f) m_fYaw -= 360.0f;
+			if (m_fYaw < 0.0f) m_fYaw += 360.0f;
 		}
 		if (z != 0.0f)
 		{
-			XMMATRIX xmmtxRotate = XMMatrixRotationAxis(XMLoadFloat3(&m_xmf3Look),
-				XMConvertToRadians(z));
-			m_xmf3Up = Vector3::TransformNormal(m_xmf3Up, xmmtxRotate);
-			m_xmf3Right = Vector3::TransformNormal(m_xmf3Right, xmmtxRotate);
+			/*로컬 z-축을 중심으로 회전하는 것은 몸통을 좌우로 기울이는 것이므로 회전 각도는 -20.0~+20.0도 사이로 제한된
+		   다. z는 현재의 m_fRoll에서 실제 회전하는 각도이므로 z만큼 회전한 다음 m_fRoll이 +20도 보다 크거나 -20도보다
+		   작으면 m_fRoll이 +20도 또는 -20도가 되도록 회전각도(z)를 수정한다.*/
+			m_fRoll += z;
+			if (m_fRoll > +20.0f) { z -= (m_fRoll - 20.0f); m_fRoll = +20.0f; }
+			if (m_fRoll < -20.0f) { z -= (m_fRoll + 20.0f); m_fRoll = -20.0f; }
 		}
 		//카메라를 x, y, z 만큼 회전한다. 플레이어를 회전하면 카메라가 회전하게 된다.
 		m_pCamera->Rotate(x, y, z);
