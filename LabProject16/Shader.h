@@ -110,6 +110,6 @@ public:
 	virtual void BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
 		* pd3dCommandList);
 	virtual CGameObject* PickObjectByRayIntersection(XMFLOAT3& xmf3PickPosition,
-		XMFLOAT4X4& xmf4x4View, float* pfNearHitDistance)
+		XMFLOAT4X4& xmf4x4View, float* pfNearHitDistance);
 
 };

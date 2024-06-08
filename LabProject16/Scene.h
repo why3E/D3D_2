@@ -32,13 +32,14 @@ public:
 protected:
 	//씬은 게임 객체들의 집합이다. 게임 객체는 셰이더를 포함한다.
 	ID3D12RootSignature* m_pd3dGraphicsRootSignature = NULL;
-	CObjectsShader* m_pShaders = NULL;
+	CObjectsShader** m_pShaders = NULL;
 	int m_nShaders = 0;
 	CPlayer* m_pPlayer = NULL;
 
 public:
 	void CheckObjectByBulletCollisions();
 	void CheckPlyaerByBulletCollisions();
+	virtual void CheckObjectByWallCollisions();
 };
 
 class start_Scene :CScene
@@ -58,5 +59,6 @@ public:
 	stage_Scene();
 	~stage_Scene();
 
+	virtual void CheckObjectByWallCollisions();
 	virtual void BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList *pd3dCommandList);
 };

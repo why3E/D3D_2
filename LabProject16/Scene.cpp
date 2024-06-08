@@ -21,8 +21,8 @@ void CScene::ReleaseObjects()
 	if (m_pd3dGraphicsRootSignature) m_pd3dGraphicsRootSignature->Release();
 	for (int i = 0; i < m_nShaders; i++)
 	{
-		m_pShaders[i].ReleaseShaderVariables();
-		m_pShaders[i].ReleaseObjects();
+		m_pShaders[i]->ReleaseShaderVariables();
+		m_pShaders[i]->ReleaseObjects();
 	}
 	if (m_pShaders) delete[] m_pShaders;
 }
@@ -48,18 +48,19 @@ void CScene::AnimateObjects(float fTimeElapsed)
 
 	for (int i = 0; i < m_nShaders; i++)
 	{
-		m_pShaders[i].AnimateObjects(fTimeElapsed);
+		m_pShaders[i]->AnimateObjects(fTimeElapsed);
 	}
 
-	//CheckObjectByBulletCollisions();
-	//CheckPlyaerByBulletCollisions();
+	CheckObjectByBulletCollisions();
+	CheckPlyaerByBulletCollisions();
+	CheckObjectByWallCollisions();
 }
 
 
 
 void CScene::ReleaseUploadBuffers()
 {
-	for (int i = 0; i < m_nShaders; i++) m_pShaders[i].ReleaseUploadBuffers();
+	for (int i = 0; i < m_nShaders; i++) m_pShaders[i]->ReleaseUploadBuffers();
 }
 
 void CScene::setPlayer(CPlayer* pPlayer)
@@ -74,7 +75,7 @@ void CScene::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera
 	pCamera->UpdateShaderVariables(pd3dCommandList);
 	for (int i = 0; i < m_nShaders; i++)
 	{
-		m_pShaders[i].Render(pd3dCommandList, pCamera);
+		m_pShaders[i]->Render(pd3dCommandList, pCamera);
 	}
 }
 
@@ -143,7 +144,7 @@ CGameObject* CScene::PickObjectPointedByCursor(int xClient, int yClient, CCamera
 	//셰이더의 모든 게임 객체들에 대한 마우스 픽킹을 수행하여 카메라와 가장 가까운 게임 객체를 구한다.
 	for (int i = 0; i < m_nShaders; i++)
 	{
-		pIntersectedObject = m_pShaders[i].PickObjectByRayIntersection(xmf3PickPosition,
+		pIntersectedObject = m_pShaders[i]->PickObjectByRayIntersection(xmf3PickPosition,
 			xmf4x4View, &fHitDistance);
 		if (pIntersectedObject && (fHitDistance < fNearestHitDistance))
 		{
@@ -158,13 +159,13 @@ void CScene::CheckObjectByBulletCollisions()
 {
 	CBulletObject** ppBullets = ((CAirplanePlayer*)m_pPlayer)->m_ppBullets;
 
-	for (int i = 0; i < m_pShaders->m_nObjects; i++)
+	for (int i = 0; i < m_pShaders[0]->m_nObjects; i++)
 	{
 		for (int j = 0; j < BULLETS; j++)
 		{
-			if (ppBullets[j]->m_bActive && m_pShaders->m_ppObjects[i]->m_xmOOBB.Intersects(ppBullets[j]->m_xmOOBB))
+			if (ppBullets[j]->m_bActive && m_pShaders[0]->m_ppObjects[i]->m_xmOOBB.Intersects(ppBullets[j]->m_xmOOBB))
 			{
-				CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders->m_ppObjects[i];
+				CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[i];
 				pExplosiveObject->m_bBlowingUp = true;
 				ppBullets[j]->Reset();
 			}
@@ -174,9 +175,9 @@ void CScene::CheckObjectByBulletCollisions()
 
 void CScene::CheckPlyaerByBulletCollisions()
 {
-	for (int i = 0; i < m_pShaders->m_nObjects; i++)
+	for (int i = 0; i < m_pShaders[0]->m_nObjects; i++)
 	{
-		CBulletObject** ppBullets = ((CExplosiveObject*)m_pShaders->m_ppObjects[i])->m_ppBullets;
+		CBulletObject** ppBullets = ((CExplosiveObject*)m_pShaders[0]->m_ppObjects[i])->m_ppBullets;
 
 		for (int j = 0; j < BULLETS; j++)
 		{
@@ -189,6 +190,34 @@ void CScene::CheckPlyaerByBulletCollisions()
 	}
 
 }
+
+void CScene::CheckObjectByWallCollisions()
+{
+}
+
+void stage_Scene::CheckObjectByWallCollisions()
+{
+	if (m_nShaders > 1){
+		for (int i = 0; i < m_pShaders[1]->m_nObjects; i++)
+		{
+			ContainmentType containType = m_pShaders[1]->m_ppObjects[i]->m_xmOOBB.Contains(m_pPlayer->m_xmOOBB);
+			switch (containType)
+			{
+			case DISJOINT:
+			{
+				break;
+			}
+			case INTERSECTS:
+			{
+				break;
+			}
+			case CONTAINS:
+				break;
+			}
+		}
+	}
+}
+
 // 씬 빌드ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 start_Scene::start_Scene()
 {
@@ -202,12 +231,15 @@ void start_Scene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandLi
 
 	m_pd3dGraphicsRootSignature = CreateGraphicsRootSignature(pd3dDevice);
 	m_nShaders = 1;
-	CstartShader* startShager = new CstartShader[m_nShaders];
-	m_pShaders = (CObjectsShader*)startShager;
-	m_pShaders[0].CreateShader(pd3dDevice, m_pd3dGraphicsRootSignature);
-	m_pShaders[0].BuildObjects(pd3dDevice, pd3dCommandList);
+	m_pShaders = new CObjectsShader * [m_nShaders];
+
+	CstartShader* startShader = new CstartShader();
+	m_pShaders[0] = startShader;
+	m_pShaders[0]->CreateShader(pd3dDevice, m_pd3dGraphicsRootSignature);
+	m_pShaders[0]->BuildObjects(pd3dDevice, pd3dCommandList);
 
 }
+
 
 stage_Scene::stage_Scene()
 {
@@ -222,13 +254,18 @@ void stage_Scene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandLi
 
 	m_pd3dGraphicsRootSignature = CreateGraphicsRootSignature(pd3dDevice);
 	m_nShaders = 2;
-	CstageShader* stageShager = new CstageShader[m_nShaders];
-	m_pShaders = (CObjectsShader*)stageShager;
-	m_pShaders[0].CreateShader(pd3dDevice, m_pd3dGraphicsRootSignature);
-	m_pShaders[0].BuildObjects(pd3dDevice, pd3dCommandList);
+	m_pShaders = new CObjectsShader * [m_nShaders];
 
-	m_pShaders[1].CreateShader(pd3dDevice, m_pd3dGraphicsRootSignature);
-	m_pShaders[1].BuildObjects(pd3dDevice, pd3dCommandList);
+	CstageShader* stageShader = new CstageShader;
+	m_pShaders[0] = (CObjectsShader*)stageShader;
+	m_pShaders[0]->CreateShader(pd3dDevice, m_pd3dGraphicsRootSignature);
+	m_pShaders[0]->BuildObjects(pd3dDevice, pd3dCommandList);
+
+
+	CwallShader* wallShader = new CwallShader;
+	m_pShaders[1] = (CObjectsShader*)wallShader;
+	m_pShaders[1]->CreateShader(pd3dDevice, m_pd3dGraphicsRootSignature);
+	m_pShaders[1]->BuildObjects(pd3dDevice, pd3dCommandList);
 
 }
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ

@@ -406,6 +406,87 @@ CSphereMeshDiffused::~CSphereMeshDiffused()
 {
 }
 
+CMapMeshDiffused::CMapMeshDiffused(ID3D12Device* pd3dDevice,
+	ID3D12GraphicsCommandList* pd3dCommandList, float fRadius, int nSlices, int nStacks) :
+	CMesh(pd3dDevice, pd3dCommandList)
+{
+	m_nStride = sizeof(CDiffusedVertex);
+	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
+	m_nVertices = 2 + (nSlices * (nStacks - 1));
+	m_pVertices = new CDiffusedVertex[m_nVertices];
+	//180도를 nStacks 만큼 분할한다. 
+	float fDeltaPhi = float(XM_PI / nStacks);
+	//360도를 nSlices 만큼 분할한다.
+	float fDeltaTheta = float((2.0f * XM_PI) / nSlices);
+	int k = 0;
+	XMFLOAT4 color = (RANDOM_COLOR);
+	//구의 위(북극)를 나타내는 정점이다.
+	m_pVertices[k++] = CDiffusedVertex(0.0f, +fRadius, 0.0f, color);
+	float theta_i, phi_j;
+	//원기둥 표면의 정점이다.
+	for (int j = 1; j < nStacks; j++)
+	{
+		phi_j = fDeltaPhi * j;
+		for (int i = 0; i < nSlices; i++)
+		{
+			theta_i = fDeltaTheta * i;
+			m_pVertices[k++] = CDiffusedVertex(fRadius * sinf(phi_j) * cosf(theta_i),
+				fRadius * cosf(phi_j), fRadius * sinf(phi_j) * sinf(theta_i), color);
+		}
+	}
+	//구의 아래(남극)를 나타내는 정점이다.
+	m_pVertices[k] = CDiffusedVertex(0.0f, -fRadius, 0.0f, color);
+	m_pd3dVertexBuffer = ::CreateBufferResource(pd3dDevice, pd3dCommandList, m_pVertices,
+		m_nStride * m_nVertices, D3D12_HEAP_TYPE_DEFAULT,
+		D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER, &m_pd3dVertexUploadBuffer);
+	m_d3dVertexBufferView.BufferLocation = m_pd3dVertexBuffer->GetGPUVirtualAddress();
+	m_d3dVertexBufferView.StrideInBytes = m_nStride;
+	m_d3dVertexBufferView.SizeInBytes = m_nStride * m_nVertices;
+	m_nIndices = (nSlices * 3) * 2 + (nSlices * (nStacks - 2) * 3 * 2);
+	m_pnIndices = new UINT[m_nIndices];
+	k = 0;
+	//구의 위쪽 원뿔의 표면을 표현하는 삼각형들의 인덱스이다.
+	for (int i = 0; i < nSlices; i++)
+	{
+		m_pnIndices[k++] = 0;
+		m_pnIndices[k++] = 1 + ((i + 1) % nSlices);
+		m_pnIndices[k++] = 1 + i;
+	}
+	//구의 원기둥의 표면을 표현하는 삼각형들의 인덱스이다.
+	for (int j = 0; j < nStacks - 2; j++)
+	{
+		for (int i = 0; i < nSlices; i++)
+		{
+			//사각형의 첫 번째 삼각형의 인덱스이다.
+			m_pnIndices[k++] = 1 + (i + (j * nSlices));
+			m_pnIndices[k++] = 1 + (((i + 1) % nSlices) + (j * nSlices));
+			m_pnIndices[k++] = 1 + (i + ((j + 1) * nSlices));
+			//사각형의 두 번째 삼각형의 인덱스이다.
+			m_pnIndices[k++] = 1 + (i + ((j + 1) * nSlices));
+			m_pnIndices[k++] = 1 + (((i + 1) % nSlices) + (j * nSlices));
+			m_pnIndices[k++] = 1 + (((i + 1) % nSlices) + ((j + 1) * nSlices));
+		}
+	}
+	//구의 아래쪽 원뿔의 표면을 표현하는 삼각형들의 인덱스이다.
+	for (int i = 0; i < nSlices; i++)
+	{
+		m_pnIndices[k++] = (m_nVertices - 1);
+		m_pnIndices[k++] = ((m_nVertices - 1) - nSlices) + i;
+		m_pnIndices[k++] = ((m_nVertices - 1) - nSlices) + ((i + 1) % nSlices);
+	}
+	m_pd3dIndexBuffer = ::CreateBufferResource(pd3dDevice, pd3dCommandList, m_pnIndices,
+		sizeof(UINT) * m_nIndices, D3D12_HEAP_TYPE_DEFAULT, D3D12_RESOURCE_STATE_INDEX_BUFFER,
+		&m_pd3dIndexUploadBuffer);
+	m_d3dIndexBufferView.BufferLocation = m_pd3dIndexBuffer->GetGPUVirtualAddress();
+	m_d3dIndexBufferView.Format = DXGI_FORMAT_R32_UINT;
+	m_d3dIndexBufferView.SizeInBytes = sizeof(UINT) * m_nIndices;
+	m_xmOOBB = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fRadius,
+		fRadius, fRadius), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
+}
+CMapMeshDiffused::~CMapMeshDiffused()
+{
+}
+
 int CMesh::CheckRayIntersection(XMFLOAT3& xmf3RayOrigin, XMFLOAT3& xmf3RayDirection,
 	float* pfNearHitDistance)
 {
@@ -454,3 +535,4 @@ int CMesh::CheckRayIntersection(XMFLOAT3& xmf3RayOrigin, XMFLOAT3& xmf3RayDirect
 	}
 	return(nIntersections);
 }
+
