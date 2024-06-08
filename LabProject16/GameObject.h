@@ -27,9 +27,10 @@ public:
 	void Move(XMFLOAT3& vDirection, float fSpeed);
 
 
-	void UpdateBoundingBox();
+	virtual void UpdateBoundingBox();
 
 	BoundingOrientedBox			m_xmOOBB = BoundingOrientedBox();
+	BoundingSphere				m_xmOOSS = BoundingSphere();
 
 	void Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera, XMFLOAT4X4* pxmf4x4World, CMesh* pMesh);
 	
@@ -123,6 +124,7 @@ public:
 	float						m_fElapsedTimeAfterFire = 0.0f;
 	float						m_fLockingDelayTime = 0.3f;
 	float						m_fLockingTime = 4.0f;
+
 	CGameObject* m_pLockedObject = NULL;
 
 	void SetFirePosition(XMFLOAT3 xmf3FirePosition);
@@ -150,7 +152,7 @@ public:
 
 	char Type{};
 
-	CBulletObject* m_ppBullets[BULLETS];
+	CBulletObject*				m_ppBullets[BULLETS];
 	float						m_fBulletEffectiveRange = 150.0f;
 	void FireBullet(float fElapsedTime);
 
@@ -166,3 +168,13 @@ public:
 
 };
 
+
+class CWallObject : public CGameObject
+{
+public:
+	CWallObject(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList);
+	virtual ~CWallObject();
+
+	virtual void UpdateBoundingBox();
+	virtual void Animate(float fTimeElapsed);
+};

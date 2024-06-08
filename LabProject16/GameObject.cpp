@@ -460,3 +460,26 @@ void CGameObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pC
 		pMesh->Render(pd3dCommandList);
 	}
 }
+
+
+CWallObject::CWallObject(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
+{
+}
+
+CWallObject::~CWallObject()
+{
+}
+
+void CWallObject::Animate(float fTimeElapsed)
+{
+	CGameObject::Animate(fTimeElapsed);
+	UpdateBoundingBox();
+
+}
+void CWallObject::UpdateBoundingBox()
+{
+	if (m_pMesh)
+	{
+		m_pMesh->m_xmOOSS.Transform(m_xmOOSS, XMLoadFloat4x4(&m_xmf4x4World));
+	}
+}

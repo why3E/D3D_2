@@ -459,17 +459,20 @@ void CwallShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandLi
 {
 
 	CMapMeshDiffused* pairplane = new CMapMeshDiffused(pd3dDevice, pd3dCommandList,
-		100.0f, 20.0f, 20.0f);
-	int xObjects = 1, yObjects = 1, zObjects = 1, i = 0;
+		200.0f, 20.0f, 20.0f);
+
+	int xObjects = 1, yObjects = 1, zObjects = 1;
 	m_nObjects = 1;
+
 	m_ppObjects = new CGameObject * [m_nObjects];
-	CGameObject* pRotatingObject = NULL;
 
-	pRotatingObject = new CGameObject();
-	pRotatingObject->SetMesh((CMesh*)pairplane);
-	pRotatingObject->SetPosition(0, 0, 0);
+	CWallObject* pCWallObject = NULL;
 
-	m_ppObjects[i++] = pRotatingObject;
+	pCWallObject = new CWallObject(pd3dDevice, pd3dCommandList);
+	pCWallObject->SetMesh((CMesh*)pairplane);
+	pCWallObject->SetPosition(0, 0, 0);
+
+	m_ppObjects[0] = pCWallObject;
 
 	CreateShaderVariables(pd3dDevice, pd3dCommandList);
 

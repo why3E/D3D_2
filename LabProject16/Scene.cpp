@@ -200,15 +200,38 @@ void stage_Scene::CheckObjectByWallCollisions()
 	if (m_nShaders > 1){
 		for (int i = 0; i < m_pShaders[1]->m_nObjects; i++)
 		{
-			ContainmentType containType = m_pShaders[1]->m_ppObjects[i]->m_xmOOBB.Contains(m_pPlayer->m_xmOOBB);
+			ContainmentType containType = m_pShaders[1]->m_ppObjects[i]->m_xmOOSS.Contains(m_pPlayer->m_xmOOBB);
 			switch (containType)
 			{
 			case DISJOINT:
 			{
+				XMFLOAT3 wallPos = m_pShaders[1]->m_ppObjects[i]->GetPosition();
+				XMFLOAT3 playerPos = m_pPlayer->GetPosition();
+
+				XMFLOAT3 normalVec = Vector3::Normalize(Vector3::Subtract(wallPos, playerPos));
+
+
+				XMFLOAT3 playerDirection = m_pPlayer->GetVelocity();
+
+				float dotProduct = Vector3::DotProduct(playerDirection, normalVec);
+				XMFLOAT3 reflectedDirection = Vector3::Subtract(playerDirection, Vector3::ScalarProduct(normalVec, 2.0f * dotProduct));
+				m_pPlayer->SetVelocity(reflectedDirection);
+
 				break;
 			}
 			case INTERSECTS:
 			{
+				XMFLOAT3 wallPos = m_pShaders[1]->m_ppObjects[i]->GetPosition();
+				XMFLOAT3 playerPos = m_pPlayer->GetPosition();
+
+				XMFLOAT3 normalVec = Vector3::Normalize(Vector3::Subtract(wallPos, playerPos));
+
+				XMFLOAT3 playerDirection = m_pPlayer->GetVelocity();
+
+				float dotProduct = Vector3::DotProduct(playerDirection, normalVec);
+				XMFLOAT3 reflectedDirection = Vector3::Subtract(playerDirection, Vector3::ScalarProduct(normalVec, 2.0f * dotProduct));
+				m_pPlayer->SetVelocity(reflectedDirection);
+
 				break;
 			}
 			case CONTAINS:
@@ -221,12 +244,14 @@ void stage_Scene::CheckObjectByWallCollisions()
 // �� ����ѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤ�
 start_Scene::start_Scene()
 {
+	
 }
 start_Scene::~start_Scene()
 {
 }
 void start_Scene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
 {
+	type = 0;
 	CExplosiveObject::PrepareExplosion(pd3dDevice, pd3dCommandList);
 
 	m_pd3dGraphicsRootSignature = CreateGraphicsRootSignature(pd3dDevice);
@@ -250,6 +275,7 @@ stage_Scene::~stage_Scene()
 
 void stage_Scene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
 {
+	type = 1;
 	CExplosiveObject::PrepareExplosion(pd3dDevice, pd3dCommandList);
 
 	m_pd3dGraphicsRootSignature = CreateGraphicsRootSignature(pd3dDevice);

@@ -46,6 +46,7 @@ public:
 public:
 	//모델 좌표계의 OOBB 바운딩 박스이다.
 	BoundingOrientedBox			m_xmOOBB;
+	BoundingSphere				m_xmOOSS;
 protected:
 	ID3D12Resource* m_pd3dIndexBuffer = NULL;
 	ID3D12Resource* m_pd3dIndexUploadBuffer = NULL;
@@ -120,7 +121,7 @@ class CMapMeshDiffused : public CMesh
 {
 public:
 	CMapMeshDiffused(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
-		* pd3dCommandList, float fRadius = 200.0f, int nSlices = 20, int nStacks = 20);
+		* pd3dCommandList, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20);
 
 	virtual ~CMapMeshDiffused();
 };

@@ -273,8 +273,8 @@ void CGameFramework::BuildObjects()
 		m_pd3dCommandList, m_pScene->GetGraphicsRootSignature());
 	m_pPlayer = pAirplanePlayer;
 	m_pCamera = m_pPlayer->GetCamera();
-	
 	m_pd3dCommandList->Close();
+
 	m_pScene->setPlayer(m_pPlayer);
 	ID3D12CommandList* ppd3dCommandLists[] = { m_pd3dCommandList };
 	m_pd3dCommandQueue->ExecuteCommandLists(1, ppd3dCommandLists);
@@ -286,13 +286,14 @@ void CGameFramework::BuildObjects()
 void CGameFramework::BuildObjects_change()
 {
 	ReleaseObjects();
+
 	m_pd3dCommandList->Reset(m_pd3dCommandAllocator, NULL);
 	stage_Scene* check_scene = new stage_Scene();
 	m_pScene = (CScene*)check_scene;
 	if (m_pScene) m_pScene->BuildObjects(m_pd3dDevice, m_pd3dCommandList);
-	
-	m_pScene->setPlayer(m_pPlayer);
 	m_pd3dCommandList->Close();
+
+	m_pScene->setPlayer(m_pPlayer);
 	ID3D12CommandList* ppd3dCommandLists[] = { m_pd3dCommandList };
 	m_pd3dCommandQueue->ExecuteCommandLists(1, ppd3dCommandLists);
 
@@ -316,7 +317,7 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 		//마우스 캡쳐를 하고 현재 마우스 위치를 가져온다.
 		m_pSelectedObject = m_pScene->PickObjectPointedByCursor(LOWORD(lParam),
 			HIWORD(lParam), m_pCamera);
-		if (m_pSelectedObject)
+		if (m_pSelectedObject && m_pScene->type == 0)
 		{
 			BuildObjects_change();
 		}
@@ -565,17 +566,5 @@ void CGameFramework::ProcessSelectedObject(DWORD dwDirection, float cxDelta, flo
 	cyDelta)
 {
 	//픽킹으로 선택한 게임 객체가 있으면 키보드를 누르거나 마우스를 움직이면 게임 개체를 이동 또는 회전한다.
-	if (dwDirection != 0)
-	{
-		if (dwDirection & DIR_FORWARD) m_pSelectedObject->MoveForward(+1.0f);
-		if (dwDirection & DIR_BACKWARD) m_pSelectedObject->MoveForward(-1.0f);
-		if (dwDirection & DIR_LEFT) m_pSelectedObject->MoveStrafe(+1.0f);
-		if (dwDirection & DIR_RIGHT) m_pSelectedObject->MoveStrafe(-1.0f);
-		if (dwDirection & DIR_UP) m_pSelectedObject->MoveUp(+1.0f);
-		if (dwDirection & DIR_DOWN) m_pSelectedObject->MoveUp(-1.0f);
-	}
-	else if ((cxDelta != 0.0f) || (cyDelta != 0.0f))
-	{
-		m_pSelectedObject->Rotate(cyDelta, cxDelta, 0.0f);
-	}
+
 }

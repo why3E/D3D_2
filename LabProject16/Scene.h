@@ -40,6 +40,8 @@ public:
 	void CheckObjectByBulletCollisions();
 	void CheckPlyaerByBulletCollisions();
 	virtual void CheckObjectByWallCollisions();
+
+	int type = 0;
 };
 
 class start_Scene :CScene
@@ -56,6 +58,7 @@ public:
 class stage_Scene :CScene
 {
 public:
+
 	stage_Scene();
 	~stage_Scene();
 

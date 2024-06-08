@@ -27,7 +27,6 @@ public:
     float						m_fExplosionSpeed = 10.0f;
     float						m_fExplosionRotation = 720.0f;
 
-   
 public:
     virtual void Animate(float fElapsedTime);
     virtual void OnUpdateTransform();
@@ -131,7 +130,7 @@ public:
     void PrepareExplosion(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList);
 
     float						m_fBulletEffectiveRange = 150.0f;
-    CBulletObject* m_ppBullets[BULLETS];
+    CBulletObject*              m_ppBullets[BULLETS];
 
     void FireBullet(CGameObject* pLockedObject);
     virtual void OnUpdateTransform();

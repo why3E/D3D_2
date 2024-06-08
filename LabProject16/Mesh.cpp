@@ -482,6 +482,8 @@ CMapMeshDiffused::CMapMeshDiffused(ID3D12Device* pd3dDevice,
 	m_d3dIndexBufferView.SizeInBytes = sizeof(UINT) * m_nIndices;
 	m_xmOOBB = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fRadius,
 		fRadius, fRadius), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
+
+	m_xmOOSS = BoundingSphere(XMFLOAT3(0.0f, 0.0f, 0.0f), fRadius);
 }
 CMapMeshDiffused::~CMapMeshDiffused()
 {
