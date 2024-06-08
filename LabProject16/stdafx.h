@@ -14,6 +14,7 @@
 #include <memory.h>
 #include <tchar.h>
 
+
 ////////////////////////////////////////////////////////////////////////////////
 
 #pragma comment(lib, "d3dcompiler.lib")  // 임포트 라이브러리를 링커 속성에서 입력하지 않도록 함
@@ -133,7 +134,7 @@ namespace Vector3
 		return(xmf3Result.x);
 	}
 
-	inline float Angle(XMVECTOR xmvVector1, XMVECTOR xmvVector2)
+	inline float Angle(XMVECTOR& xmvVector1, XMVECTOR& xmvVector2)
 	{
 		XMVECTOR xmvAngle = XMVector3AngleBetweenNormals(xmvVector1, xmvVector2);
 		return(XMConvertToDegrees(acosf(XMVectorGetX(xmvAngle))));

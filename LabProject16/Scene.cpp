@@ -45,11 +45,18 @@ bool CScene::ProcessInput(UCHAR* pKeysBuffer)
 
 void CScene::AnimateObjects(float fTimeElapsed)
 {
+	for (int i = 0; i < m_pShaders[0]->m_nObjects; i++)
+	{
+		m_pShaders[0]->m_ppObjects[i]->m_pLockedObject = m_pPlayer->GetPosition();
+	}
+
 
 	for (int i = 0; i < m_nShaders; i++)
 	{
+
 		m_pShaders[i]->AnimateObjects(fTimeElapsed);
 	}
+
 
 	CheckObjectByBulletCollisions();
 	CheckPlyaerByBulletCollisions();

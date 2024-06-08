@@ -305,13 +305,6 @@ void CPlayer::OnPrepareRender()
 	m_xmf4x4World._43 = m_xmf3Position.z;
 }
 
-void CPlayer::OnUpdateTransform()
-{
-	m_xmf4x4World._11 = m_xmf3Right.x; m_xmf4x4World._12 = m_xmf3Right.y; m_xmf4x4World._13 = m_xmf3Right.z;
-	m_xmf4x4World._21 = m_xmf3Up.x; m_xmf4x4World._22 = m_xmf3Up.y; m_xmf4x4World._23 = m_xmf3Up.z;
-	m_xmf4x4World._31 = m_xmf3Look.x; m_xmf4x4World._32 = m_xmf3Look.y; m_xmf4x4World._33 = m_xmf3Look.z;
-	m_xmf4x4World._41 = m_xmf3Position.x; m_xmf4x4World._42 = m_xmf3Position.y; m_xmf4x4World._43 = m_xmf3Position.z;
-}
 
 void CPlayer::Animate(float fElapsedTime)
 {
@@ -338,7 +331,7 @@ void CPlayer::Animate(float fElapsedTime)
 	}
 	else
 	{
-		OnUpdateTransform();
+		OnPrepareRender();
 		CGameObject::Animate(fElapsedTime);
 
 	}
@@ -532,12 +525,6 @@ void CAirplanePlayer::Animate(float fElapsedTime)
 
 	
 
-}
-void CAirplanePlayer::OnUpdateTransform()
-{
-	CPlayer::OnUpdateTransform();
-
-	m_xmf4x4World = Matrix4x4::Multiply(XMMatrixRotationRollPitchYaw(XMConvertToRadians(90.0f), 0.0f, 0.0f), m_xmf4x4World);
 }
 
 void CAirplanePlayer::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera)

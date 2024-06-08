@@ -400,32 +400,41 @@ void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 	CAirplaneMeshDiffused* pairplane = new CAirplaneMeshDiffused(pd3dDevice, pd3dCommandList,
 		8.0f, 12.0f, 4.0f, RANDOM_COLOR);
 	int xObjects = 1, yObjects = 1, zObjects = 1, i = 0;
-	m_nObjects = (xObjects * 2 + 1) * (yObjects * 2 + 1) * (zObjects * 2 + 1);
+	m_nObjects = 2;
+
 	m_ppObjects = new CGameObject * [m_nObjects];
 	float fxPitch = 12.0f * 2.5f;
 	float fyPitch = 12.0f * 2.5f;
 	float fzPitch = 12.0f * 2.5f;
 	CExplosiveObject* pRotatingObject = NULL;
 
-	for (int x = -xObjects; x <= xObjects; x++)
-	{
-		for (int y = -yObjects; y <= yObjects; y++)
-		{
-			for (int z = -zObjects; z <= zObjects; z++)
-			{
-				pRotatingObject = new CExplosiveObject(pd3dDevice, pd3dCommandList);
-				pRotatingObject->SetMesh((CMesh*)pairplane);
-				pRotatingObject->SetPosition(fxPitch * x, fyPitch * y, fzPitch * z);
-				pRotatingObject->SetRotationAxis(XMFLOAT3(1.0f, 0.0f, 0.0f));
-				pRotatingObject->SetRotationSpeed(0);
 
-				pRotatingObject->SetMovingDirection(XMFLOAT3(1.0f, 0, 0));
-				pRotatingObject->SetMovingSpeed(5.0f);
-				pRotatingObject->Rotate(-90.0f, 0.0f, 0);
-				m_ppObjects[i++] = pRotatingObject;
-			}
-		}
-	}
+	pRotatingObject = new CExplosiveObject(pd3dDevice, pd3dCommandList);
+	pRotatingObject->SetMesh((CMesh*)pairplane);
+	pRotatingObject->SetPosition(0,0,0);
+	pRotatingObject->SetRotationAxis(XMFLOAT3(1.0f, 0.0f, 0.0f));
+	pRotatingObject->SetRotationSpeed(0);
+	pRotatingObject->type = 'A';
+	pRotatingObject->SetMovingDirection(XMFLOAT3(1.0f, 0, 0));
+	pRotatingObject->SetMovingSpeed(0.0f);
+
+	m_ppObjects[0] = pRotatingObject;
+
+	CExplosiveObject* pRotatingObject2 = NULL;
+
+
+	pRotatingObject2 = new CExplosiveObject(pd3dDevice, pd3dCommandList);
+	pRotatingObject2->SetMesh((CMesh*)pairplane);
+	pRotatingObject2->SetPosition(0, 20.0f, 0);
+	pRotatingObject2->SetRotationAxis(XMFLOAT3(1.0f, 0.0f, 0.0f));
+	pRotatingObject2->SetRotationSpeed(0);
+	pRotatingObject2->type = 'A';
+	pRotatingObject2->SetMovingDirection(XMFLOAT3(1.0f, 0, 0));
+	pRotatingObject2->SetMovingSpeed(0.0f);
+
+	m_ppObjects[1] = pRotatingObject2;
+
+
 	CreateShaderVariables(pd3dDevice, pd3dCommandList);
 }
 

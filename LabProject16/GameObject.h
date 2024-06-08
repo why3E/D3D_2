@@ -10,6 +10,7 @@ class CBulletObject;
 class CGameObject
 {
 public:
+	char type{'N'};
 	XMFLOAT3					m_xmf3MovingDirection = XMFLOAT3(0.0f, 0.0f, 1.0f);
 	float						m_fMovingSpeed = 0.0f;
 	float						m_fMovingRange = 0.0f;
@@ -41,6 +42,9 @@ public:
 	//카메라 좌표계의 한 점에 대한 모델 좌표계의 픽킹 광선을 생성하고 객체와의 교차를 검사한다.
 	virtual int PickObjectByRayIntersection(XMFLOAT3& xmf3PickPosition, XMFLOAT4X4& xmf4x4View,
 		float* pfHitDistance);
+
+	XMFLOAT3 m_pLockedObject{XMFLOAT3(1.0f,0,0)};
+
 public:
 	//게임 객체가 카메라에 보인는 가를 검사한다.
 	bool IsVisible(CCamera* pCamera = NULL);
@@ -78,6 +82,7 @@ public:
 	XMFLOAT3 GetLook();
 	XMFLOAT3 GetUp();
 	XMFLOAT3 GetRight();
+
 	//게임 객체의 위치를 설정한다.
 	void SetPosition(float x, float y, float z);
 	void SetPosition(XMFLOAT3 xmf3Position);
@@ -87,7 +92,7 @@ public:
 	void MoveForward(float fDistance = 1.0f);
 	//게임 객체를 회전(x-축, y-축, z-축)한다.
 	void Rotate(float fPitch = 10.0f, float fYaw = 10.0f, float fRoll = 10.0f);
-
+	void TargetRotate();
 };
 
 class CRotatingObject : public CGameObject
@@ -105,6 +110,7 @@ public:
 		m_xmf3RotationAxis = xmf3RotationAxis;
 	}
 	virtual void Animate(float fTimeElapsed);
+	void Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera);
 };
 
 class CBulletObject : public CRotatingObject
@@ -150,7 +156,6 @@ public:
 	float						m_fElapsedTimeAfterFire = 0.0f;
 	float						m_fLockingDelayTime = 4.0f;
 
-	char Type{};
 
 	CBulletObject*				m_ppBullets[BULLETS];
 	float						m_fBulletEffectiveRange = 150.0f;

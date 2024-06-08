@@ -35,6 +35,11 @@ CGameObject::~CGameObject()
 	}
 }
 
+void CGameObject::OnPrepareRender()
+{
+
+}
+
 bool CGameObject::IsVisible(CCamera* pCamera)
 {
 	OnPrepareRender();
@@ -69,7 +74,11 @@ void CGameObject::ReleaseUploadBuffers()
 void CGameObject::Animate(float fTimeElapsed)
 {
 	if (m_fMovingSpeed != 0.0f) Move(m_xmf3MovingDirection, m_fMovingSpeed * fTimeElapsed);
+	
 	UpdateBoundingBox();
+	if (type == 'A') {
+		TargetRotate();
+	}
 
 }
 void CGameObject::UpdateBoundingBox()
@@ -79,11 +88,6 @@ void CGameObject::UpdateBoundingBox()
 		m_pMesh->m_xmOOBB.Transform(m_xmOOBB, XMLoadFloat4x4(&m_xmf4x4World));
 		XMStoreFloat4(&m_xmOOBB.Orientation, XMQuaternionNormalize(XMLoadFloat4(&m_xmOOBB.Orientation)));
 	}
-}
-
-void CGameObject::OnPrepareRender()
-{
-
 }
 
 void CGameObject::CreateShaderVariables(ID3D12Device* pd3dDevice,
@@ -141,19 +145,25 @@ void CRotatingObject::Animate(float fTimeElapsed)
 
 	CGameObject::Rotate(&m_xmf3RotationAxis, m_fRotationSpeed * fTimeElapsed);
 	CGameObject::Animate(fTimeElapsed);
+	
 
 }
-
+void CRotatingObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera)
+{
+	CGameObject::Render(pd3dCommandList, pCamera);
+}
 void CGameObject::SetPosition(float x, float y, float z)
 {
 	m_xmf4x4World._41 = x;
 	m_xmf4x4World._42 = y;
 	m_xmf4x4World._43 = z;
+
 }
 
 void CGameObject::SetPosition(XMFLOAT3 xmf3Position)
 {
 	SetPosition(xmf3Position.x, xmf3Position.y, xmf3Position.z);
+
 }
 XMFLOAT3 CGameObject::GetPosition()
 {
@@ -339,8 +349,8 @@ CExplosiveObject::CExplosiveObject(ID3D12Device* pd3dDevice,ID3D12GraphicsComman
 		m_ppBullets[i]->SetRotationSpeed(360.0f);
 		m_ppBullets[i]->SetMovingSpeed(80.0f);
 		m_ppBullets[i]->SetActive(false);
-		
 	}
+
 }
 
 CExplosiveObject::~CExplosiveObject()
@@ -354,6 +364,7 @@ void CExplosiveObject::PrepareExplosion(ID3D12Device* pd3dDevice,
 	for (int i = 0; i < EXPLOSION_DEBRISES; i++) XMStoreFloat3(&m_pxmf3SphereVectors[i], ::RandomUnitVectorOnSphere());
 
 	m_pExplosionMesh = new CSphereMeshDiffused(pd3dDevice, pd3dCommandList,1.0f, 20, 20);
+
 }
 
 void CExplosiveObject::FireBullet(float fElapsedTime)
@@ -410,6 +421,8 @@ void CExplosiveObject::Animate(float fElapsedTime)
 		}
 		else
 		{
+			
+
 			m_fElapsedTimes = 0;
 			m_bBlowingUp = false;
 			//SetPosition(float(uidPos2(dre2)), float(uidPos2(dre2)), float(uidPos2(dre2)));
@@ -423,11 +436,7 @@ void CExplosiveObject::Animate(float fElapsedTime)
 		{
 			if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Animate(fElapsedTime);
 		}
-		//if (Type == 'A') {
-			//TargetRotateXY();
-			//TargetRotateYZ();
-			//TargetRotateZX();
-		//}
+		
 		CRotatingObject::Animate(fElapsedTime);
 	}
 }
@@ -443,7 +452,7 @@ void CExplosiveObject::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamer
 	}
 	else
 	{
-		CGameObject::Render(pd3dCommandList,pCamera);
+		CRotatingObject::Render(pd3dCommandList,pCamera);
 
 		for (int i = 0; i < BULLETS; i++) if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Render(pd3dCommandList, pCamera);
 	}
@@ -473,6 +482,7 @@ CWallObject::~CWallObject()
 void CWallObject::Animate(float fTimeElapsed)
 {
 	CGameObject::Animate(fTimeElapsed);
+
 	UpdateBoundingBox();
 
 }
@@ -483,3 +493,17 @@ void CWallObject::UpdateBoundingBox()
 		m_pMesh->m_xmOOSS.Transform(m_xmOOSS, XMLoadFloat4x4(&m_xmf4x4World));
 	}
 }
+
+void CGameObject::TargetRotate()
+{
+	XMFLOAT3 LockedObjectPosition = m_pLockedObject;
+
+	XMFLOAT3 xmf3Look = Vector3::Normalize(Vector3::Subtract(LockedObjectPosition, GetPosition()));
+	XMFLOAT3 xmf3Right = Vector3::CrossProduct(XMFLOAT3(0.0f,1.0f,0.0f), xmf3Look, true);
+	XMFLOAT3 xmf3Up = Vector3::CrossProduct(xmf3Look, xmf3Right, true);
+
+	m_xmf4x4World._11 = xmf3Right.x; m_xmf4x4World._12 = xmf3Right.y; m_xmf4x4World._13 = xmf3Right.z;
+	m_xmf4x4World._21 = xmf3Look.x; m_xmf4x4World._22 = xmf3Look.y; m_xmf4x4World._23 = xmf3Look.z;
+	m_xmf4x4World._31 = xmf3Up.x; m_xmf4x4World._32 = xmf3Up.y; m_xmf4x4World._33 = xmf3Up.z;
+}
+
