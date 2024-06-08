@@ -115,3 +115,12 @@ public:
 		* pd3dCommandList, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20);
 	virtual ~CSphereMeshDiffused();
 };
+
+class CMapMeshDiffused : public CMesh
+{
+public:
+	CMapMeshDiffused(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
+		* pd3dCommandList, float fRadius = 200.0f, int nSlices = 20, int nStacks = 20);
+
+	virtual ~CMapMeshDiffused();
+};

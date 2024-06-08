@@ -51,8 +51,8 @@ void CScene::AnimateObjects(float fTimeElapsed)
 		m_pShaders[i].AnimateObjects(fTimeElapsed);
 	}
 
-	CheckObjectByBulletCollisions();
-	CheckPlyaerByBulletCollisions();
+	//CheckObjectByBulletCollisions();
+	//CheckPlyaerByBulletCollisions();
 }
 
 
@@ -221,12 +221,14 @@ void stage_Scene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandLi
 	CExplosiveObject::PrepareExplosion(pd3dDevice, pd3dCommandList);
 
 	m_pd3dGraphicsRootSignature = CreateGraphicsRootSignature(pd3dDevice);
-	m_nShaders = 1;
+	m_nShaders = 2;
 	CstageShader* stageShager = new CstageShader[m_nShaders];
 	m_pShaders = (CObjectsShader*)stageShager;
 	m_pShaders[0].CreateShader(pd3dDevice, m_pd3dGraphicsRootSignature);
 	m_pShaders[0].BuildObjects(pd3dDevice, pd3dCommandList);
 
-}
+	m_pShaders[1].CreateShader(pd3dDevice, m_pd3dGraphicsRootSignature);
+	m_pShaders[1].BuildObjects(pd3dDevice, pd3dCommandList);
 
+}
 //�ѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤ�

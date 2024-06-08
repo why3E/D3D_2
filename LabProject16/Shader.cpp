@@ -254,7 +254,7 @@ void CObjectsShader::CreateShader(ID3D12Device* pd3dDevice, ID3D12RootSignature
 	m_ppd3dPipelineStates = new ID3D12PipelineState * [m_nPipelineStates];
 	CShader::CreateShader(pd3dDevice, pd3dGraphicsRootSignature);
 }
-//
+
 void CObjectsShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
 	* pd3dCommandList)
 {
@@ -288,6 +288,7 @@ void CObjectsShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsComman
 	}
 	CreateShaderVariables(pd3dDevice, pd3dCommandList);
 }
+
 
 void CObjectsShader::ReleaseObjects()
 {
@@ -348,6 +349,7 @@ CGameObject* CObjectsShader::PickObjectByRayIntersection(XMFLOAT3& xmf3PickPosit
 	}
 	return(pSelectedObject);
 }
+
 CstartShader::CstartShader()
 {
 }
@@ -395,8 +397,6 @@ CstageShader::~CstageShader()
 
 void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
 {
-	CExplosiveObject::PrepareExplosion(pd3dDevice, pd3dCommandList);
-
 	CAirplaneMeshDiffused* pairplane = new CAirplaneMeshDiffused(pd3dDevice, pd3dCommandList,
 		8.0f, 12.0f, 4.0f, RANDOM_COLOR);
 	int xObjects = 1, yObjects = 1, zObjects = 1, i = 0;
@@ -406,6 +406,7 @@ void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 	float fyPitch = 12.0f * 2.5f;
 	float fzPitch = 12.0f * 2.5f;
 	CExplosiveObject* pRotatingObject = NULL;
+
 	for (int x = -xObjects; x <= xObjects; x++)
 	{
 		for (int y = -yObjects; y <= yObjects; y++)
@@ -426,4 +427,56 @@ void CstageShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandL
 		}
 	}
 	CreateShaderVariables(pd3dDevice, pd3dCommandList);
+}
+
+CwallShader::CwallShader()
+{
+}
+
+CwallShader::~CwallShader()
+{
+}
+
+D3D12_RASTERIZER_DESC CwallShader::CreateRasterizerState()
+{
+	D3D12_RASTERIZER_DESC d3dRasterizerDesc;
+	::ZeroMemory(&d3dRasterizerDesc, sizeof(D3D12_RASTERIZER_DESC));
+	d3dRasterizerDesc.FillMode = D3D12_FILL_MODE_WIREFRAME;
+	d3dRasterizerDesc.CullMode = D3D12_CULL_MODE_NONE;
+	d3dRasterizerDesc.FrontCounterClockwise = FALSE;
+	d3dRasterizerDesc.DepthBias = 0;
+	d3dRasterizerDesc.DepthBiasClamp = 0.0f;
+	d3dRasterizerDesc.SlopeScaledDepthBias = 0.0f;
+	d3dRasterizerDesc.DepthClipEnable = TRUE;
+	d3dRasterizerDesc.MultisampleEnable = FALSE;
+	d3dRasterizerDesc.AntialiasedLineEnable = FALSE;
+	d3dRasterizerDesc.ForcedSampleCount = 0;
+	d3dRasterizerDesc.ConservativeRaster = D3D12_CONSERVATIVE_RASTERIZATION_MODE_OFF;
+	return(d3dRasterizerDesc);
+}
+
+void CwallShader::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
+{
+
+	CMapMeshDiffused* pairplane = new CMapMeshDiffused(pd3dDevice, pd3dCommandList,
+		100.0f, 20.0f, 20.0f);
+	int xObjects = 1, yObjects = 1, zObjects = 1, i = 0;
+	m_nObjects = 1;
+	m_ppObjects = new CGameObject * [m_nObjects];
+	CGameObject* pRotatingObject = NULL;
+
+	pRotatingObject = new CGameObject();
+	pRotatingObject->SetMesh((CMesh*)pairplane);
+	pRotatingObject->SetPosition(0, 0, 0);
+
+	m_ppObjects[i++] = pRotatingObject;
+
+	CreateShaderVariables(pd3dDevice, pd3dCommandList);
+
+}
+
+CGameObject* CwallShader::PickObjectByRayIntersection(XMFLOAT3& xmf3PickPosition,
+	XMFLOAT4X4& xmf4x4View, float* pfNearHitDistance)
+{
+	return NULL;
 }
