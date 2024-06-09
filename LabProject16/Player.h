@@ -27,6 +27,9 @@ public:
     float						m_fExplosionSpeed = 10.0f;
     float						m_fExplosionRotation = 720.0f;
 
+    bool						m_shield = false;
+    CGameObject* m_pshield;
+
 public:
     virtual void Animate(float fElapsedTime);
 protected:
@@ -59,6 +62,8 @@ protected:
 
     // 플레이어에 현재 설정된 카메라이다.
     CCamera* m_pCamera = NULL;
+
+
 
 public:
     CPlayer();
@@ -135,5 +140,5 @@ public:
     virtual void Animate(float fElapsedTime);
     virtual void Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamera);
 
-
+    void SetShield(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList);
 };

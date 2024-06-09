@@ -332,8 +332,12 @@ void CPlayer::Animate(float fElapsedTime)
 	else
 	{
 		OnPrepareRender();
+		if (m_shield == true)
+		{
+			m_pshield->SetPosition(GetPosition());
+		}
 		CGameObject::Animate(fElapsedTime);
-
+		m_pshield->Animate(fElapsedTime);
 	}
 }
 
@@ -351,6 +355,10 @@ void CPlayer::Render(ID3D12GraphicsCommandList* pd3dCommandList, CCamera* pCamer
 			}
 		}
 		else {
+			if (m_shield == true)
+			{
+				m_pshield->Render(pd3dCommandList, pCamera);
+			}
 			if (m_pShader) m_pShader->Render(pd3dCommandList, pCamera);
 			CGameObject::Render(pd3dCommandList, pCamera);
 		}
@@ -391,6 +399,8 @@ CAirplanePlayer::CAirplanePlayer(ID3D12Device* pd3dDevice, ID3D12GraphicsCommand
 	pShader->CreateShader(pd3dDevice, pd3dGraphicsRootSignature);
 	SetShader(pShader);
 	PrepareExplosion(pd3dDevice, pd3dCommandList);
+	SetShield(pd3dDevice, pd3dCommandList);
+
 }
 
 CAirplanePlayer::~CAirplanePlayer()
@@ -404,6 +414,23 @@ void CAirplanePlayer::PrepareExplosion(ID3D12Device* pd3dDevice, ID3D12GraphicsC
 {
 	for (int i = 0; i < EXPLOSION_DEBRISES; i++) XMStoreFloat3(&m_pxmf3SphereVectors[i], ::RandomUnitVectorOnSphere2());
 	m_pExplosionMesh = new CSphereMeshDiffused(pd3dDevice, pd3dCommandList, 1.0f, 20, 20);
+}
+
+void CAirplanePlayer::SetShield(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList
+	* pd3dCommandList)
+{
+
+	CCubeMeshDiffused* pCubeMesh = new CCubeMeshDiffused(pd3dDevice, pd3dCommandList, 25.0f, 25.0f, 25.0f);
+
+	CRotatingObject* pExplosiveObject = new CRotatingObject();
+	pExplosiveObject->SetMesh(pCubeMesh);
+	pExplosiveObject->SetPosition(GetPosition());
+	pExplosiveObject->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
+	pExplosiveObject->SetRotationSpeed(50.0f);
+	pExplosiveObject->SetMovingDirection(XMFLOAT3(0.0f, 0.0f, 0.0f));
+	pExplosiveObject->SetMovingSpeed(0.0f);
+	
+	m_pshield = pExplosiveObject;
 }
 
 void CAirplanePlayer::OnPrepareRender()

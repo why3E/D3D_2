@@ -38,6 +38,8 @@ bool CScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wPar
 	return(false);
 }
 
+
+
 bool CScene::ProcessInput(UCHAR* pKeysBuffer)
 {
 	return(false);
@@ -178,6 +180,21 @@ void CScene::CheckObjectByBulletCollisions()
 			}
 		}
 	}
+
+	if (m_pPlayer->m_shield)
+	{
+		for (int i = 0; i < m_pShaders[0]->m_nObjects; i++)
+		{
+			CBulletObject** ppBullets = ((CExplosiveObject*)m_pShaders[0]->m_ppObjects[i])->m_ppBullets;
+			for (int j = 0; j < BULLETS; j++)
+			{
+				if (ppBullets[j]->m_bActive && m_pPlayer->m_pshield->m_xmOOBB.Intersects(ppBullets[j]->m_xmOOBB))
+				{
+					ppBullets[j]->Reset();
+				}
+			}
+		}
+	}
 }
 
 void CScene::CheckPlyaerByBulletCollisions()
@@ -279,6 +296,75 @@ stage_Scene::stage_Scene()
 stage_Scene::~stage_Scene()
 {
 }
+
+bool stage_Scene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam,
+	LPARAM lParam)
+{
+	switch (nMessageID)
+	{
+	case WM_KEYDOWN:
+		switch (wParam)
+		{
+		case '1': {
+			CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[int(wParam - '1')];
+			pExplosiveObject->m_bBlowingUp = true;
+		}
+				break;
+		case '2': {
+			CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[int(wParam - '1')];
+			pExplosiveObject->m_bBlowingUp = true;
+		}
+				break;
+		case '3': {
+			CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[int(wParam - '1')];
+			pExplosiveObject->m_bBlowingUp = true;
+		}
+				break;
+		case '4': {
+			CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[int(wParam - '1')];
+			pExplosiveObject->m_bBlowingUp = true;
+		}
+				break;
+		case '5': {
+			CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[int(wParam - '1')];
+			pExplosiveObject->m_bBlowingUp = true;
+		}
+				break;
+		case '6': {
+			CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[int(wParam - '1')];
+			pExplosiveObject->m_bBlowingUp = true;
+		}
+				break;
+		case '7': {
+			CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[int(wParam - '1')];
+			pExplosiveObject->m_bBlowingUp = true;
+		}
+				break;
+
+		case 'A':
+			for (int i = 0; i < m_pShaders[0]->m_nObjects; i++)
+			{
+				CExplosiveObject* pExplosiveObject = (CExplosiveObject*)m_pShaders[0]->m_ppObjects[i];
+				pExplosiveObject->m_bBlowingUp = true;
+			}
+			break;
+		case 'X':
+			m_pPlayer->m_shield = false;
+			break;
+		case 'Z':
+			m_pPlayer->m_shield = true;
+			break;
+		default:
+			break;
+		}
+		break;
+	default:
+		break;
+
+	}
+	return(false);
+}
+
 
 void stage_Scene::BuildObjects(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList)
 {
